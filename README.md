@@ -1,4 +1,4 @@
-﻿# Curso: DeerFlow 2.0 â€” do bÃ¡sico ao avanÃ§ado
+ï»¿# Curso: DeerFlow 2.0 ê¢â¬â do bêÂ¡sico ao avanêÂ§ado
 
 <div align="center">
   <img src="capa/logo.svg" alt="Arckhé AI" height="48" />
@@ -6,47 +6,47 @@
 </div>
 
 
-![DeerFlow 2.0 â€” LanÃ§amento](assets/deerflow-launch.png)
+![DeerFlow 2.0 ê¢â¬â LanêÂ§amento](assets/deerflow-launch.png)
 
-RepositÃ³rio de conteÃºdo do curso sobre **DeerFlow 2.0**, o super agent harness open-source da ByteDance.
+RepositêÂ³rio de conteêÂºdo do curso sobre **DeerFlow 2.0**, o super agent harness open-source da ByteDance.
 
-O curso cobre trÃªs frentes:
+O curso cobre trêÂªs frentes:
 
-1. **Track 1 â€” Fundamentos**: o que Ã©, como instalar, como usar no dia a dia (pÃºblico: devs curiosos, PMs tÃ©cnicos, pesquisadores).
-2. **Track 2 â€” AvanÃ§ado**: arquitetura interna, criaÃ§Ã£o de skills, sub-agents, MCP servers, embedding, contribuiÃ§Ã£o upstream (pÃºblico: engenheiros de IA, platform engineers).
-3. **Comparativo**: DeerFlow vs. Claude Code vs. Antigravity â€” quando usar o quÃª.
+1. **Track 1 ê¢â¬â Fundamentos**: o que êÂ©, como instalar, como usar no dia a dia (pêÂºblico: devs curiosos, PMs têÂ©cnicos, pesquisadores).
+2. **Track 2 ê¢â¬â AvanêÂ§ado**: arquitetura interna, criaêÂ§êÂ£o de skills, sub-agents, MCP servers, embedding, contribuiêÂ§êÂ£o upstream (pêÂºblico: engenheiros de IA, platform engineers).
+3. **Comparativo**: DeerFlow vs. Claude Code vs. Antigravity ê¢â¬â quando usar o quêÂª.
 
-## Estrutura do repositÃ³rio
+## Estrutura do repositêÂ³rio
 
 ```
 deerflow/
-â”œâ”€â”€ docs/
-â”‚   â””â”€â”€ plano-do-curso.md           # Plano mestre do curso (mÃ³dulos, labs, entregÃ¡veis)
-â”œâ”€â”€ track-1-fundamentos/            # Material do Track 1 (a produzir)
-â”‚   â””â”€â”€ README.md
-â”œâ”€â”€ track-2-avancado/               # Material do Track 2 (a produzir)
-â”‚   â””â”€â”€ README.md
-â””â”€â”€ comparativo/                    # MÃ³dulo comparativo (a produzir)
-    â””â”€â”€ README.md
+ê¢âÅê¢ââ¬ê¢ââ¬ docs/
+ê¢ââ   ê¢ââê¢ââ¬ê¢ââ¬ plano-do-curso.md           # Plano mestre do curso (mêÂ³dulos, labs, entregêÂ¡veis)
+ê¢âÅê¢ââ¬ê¢ââ¬ track-1-fundamentos/            # Material do Track 1 (a produzir)
+ê¢ââ   ê¢ââê¢ââ¬ê¢ââ¬ README.md
+ê¢âÅê¢ââ¬ê¢ââ¬ track-2-avancado/               # Material do Track 2 (a produzir)
+ê¢ââ   ê¢ââê¢ââ¬ê¢ââ¬ README.md
+ê¢ââê¢ââ¬ê¢ââ¬ comparativo/                    # MêÂ³dulo comparativo (a produzir)
+    ê¢ââê¢ââ¬ê¢ââ¬ README.md
 ```
 
 ## Como usar este repo
 
-- O arquivo `docs/plano-do-curso.md` Ã© o ponto de partida. Ele contÃ©m o Ã­ndice completo, objetivos, labs e entregÃ¡veis de cada mÃ³dulo.
-- Cada track tem seu prÃ³prio diretÃ³rio com o conteÃºdo das aulas (roteiros, slides-chave, cÃ³digo dos labs).
-- O diretÃ³rio `comparativo/` hospeda o material transversal de comparaÃ§Ã£o entre plataformas.
+- O arquivo `docs/plano-do-curso.md` êÂ© o ponto de partida. Ele contêÂ©m o êÂ­ndice completo, objetivos, labs e entregêÂ¡veis de cada mêÂ³dulo.
+- Cada track tem seu prêÂ³prio diretêÂ³rio com o conteêÂºdo das aulas (roteiros, slides-chave, cêÂ³digo dos labs).
+- O diretêÂ³rio `comparativo/` hospeda o material transversal de comparaêÂ§êÂ£o entre plataformas.
 
 ## Status
 
-Plano do curso salvo. ConteÃºdo dos mÃ³dulos **pendente** de decisÃµes sobre:
+Plano do curso salvo. ConteêÂºdo dos mêÂ³dulos **pendente** de decisêÂµes sobre:
 
-- Formato final (vÃ­deo, texto, HTML interativo, LMSâ€¦)
+- Formato final (vêÂ­deo, texto, HTML interativo, LMSê¢â¬Â¦)
 - Idioma
-- DuraÃ§Ã£o-alvo
+- DuraêÂ§êÂ£o-alvo
 - Profundidade dos labs
-- NÃ­vel de prÃ©-requisito do Track 2
+- NêÂ­vel de prêÂ©-requisito do Track 2
 
-Ver o final de `docs/plano-do-curso.md` para o checklist de decisÃµes em aberto.
+Ver o final de `docs/plano-do-curso.md` para o checklist de decisêÂµes em aberto.
 
 ---
 

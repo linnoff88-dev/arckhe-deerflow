@@ -112,7 +112,7 @@
       <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MÓDULO 3.2</span>
       <h1 class="text-3xl sm:text-4xl font-bold mb-4">🛡️ Sandbox, file system e segurança</h1>
       <p class="text-lg text-neutral-400 max-w-3xl">
-        Os três modos de sandbox revisitados sob a lente de risco real. Isolamento, quotas, leitura guiada do SECURITY.md e os alertas de deploy que todo time precisa conhecer antes de pôr um agente em produção.
+        Os três modos de sandbox revisitados sob a lente de risco real. Isolamento, quotas, leitura guiada do SECURITY.md e os alertas de deploy que todo time precisa conhecer antes de pôr um agente em produçêo.
       </p>
       <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
         <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">5</div><div class="text-xs text-neutral-400">Tópicos</div></div>
@@ -128,7 +128,7 @@
     <!-- Intro -->
     <div class="mb-12 bg-primary/10 rounded-xl border border-primary/30 p-6">
       <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Como ler este módulo</h3>
-      <p class="text-neutral-300">Na Trilha 1 você viu os três modos de sandbox em termos de conveniência. Aqui trocamos a lente: para cada modo, <strong class="text-primary">o que acontece se a tool executar código hostil?</strong> Se a resposta for "o host cai", o modo não serve para produção. Sandbox é a última barreira — se ela falhar, tudo depois falha.</p>
+      <p class="text-neutral-300">Na Trilha 1 você viu os três modos de sandbox em termos de conveniência. Aqui trocamos a lente: para cada modo, <strong class="text-primary">o que acontece se a tool executar código hostil?</strong> Se a resposta for "o host cai", o modo nêo serve para produçêo. Sandbox é a última barreira — se ela falhar, tudo depois falha.</p>
     </div>
 
     <!-- TOPICO 1 -->
@@ -138,7 +138,7 @@
         <h2 class="text-2xl font-bold">🔒 Local / Docker / K8s revisitados sob lente de risco</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Os três modos já são conhecidos; o que muda aqui é o eixo de comparação. Em vez de "qual roda mais rápido", a pergunta é <strong class="text-purple-400">"o que um código hostil consegue fazer em cada um?"</strong>. A resposta determina onde cada modo pode viver.
+        Os três modos já sêo conhecidos; o que muda aqui é o eixo de comparaçêo. Em vez de "qual roda mais rápido", a pergunta é <strong class="text-purple-400">"o que um código hostil consegue fazer em cada um?"</strong>. A resposta determina onde cada modo pode viver.
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
@@ -148,7 +148,7 @@
           <ul class="space-y-2 text-neutral-300 text-xs">
             <li>• Acesso completo ao FS do host</li>
             <li>• Pode ler <code>~/.ssh</code>, <code>.env</code>, keychain</li>
-            <li>• Exfiltração via rede sem trava</li>
+            <li>• Exfiltraçêo via rede sem trava</li>
             <li>• Uso: apenas máquina descartável de dev</li>
           </ul>
         </div>
@@ -157,9 +157,9 @@
           <p class="text-neutral-300 text-sm mb-3"><strong>Risco:</strong> médio</p>
           <ul class="space-y-2 text-neutral-300 text-xs">
             <li>• Namespace isolado; host protegido</li>
-            <li>• Egress de rede aberto por padrão</li>
-            <li>• Escape via docker.sock se montado (não monte)</li>
-            <li>• Uso: dev equipe, produção pequena</li>
+            <li>• Egress de rede aberto por padrêo</li>
+            <li>• Escape via docker.sock se montado (nêo monte)</li>
+            <li>• Uso: dev equipe, produçêo pequena</li>
           </ul>
         </div>
         <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
@@ -169,14 +169,14 @@
             <li>• NetworkPolicy restringe egress</li>
             <li>• PSA + seccomp + AppArmor compondo</li>
             <li>• Quotas hard por namespace</li>
-            <li>• Uso: multi-tenant, produção</li>
+            <li>• Uso: multi-tenant, produçêo</li>
           </ul>
         </div>
       </div>
 
       <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center"><span class="mr-2">🎯</span> O modelo de ameaça que importa</h3>
-        <p class="text-neutral-300">O agente não precisa ser comprometido por um atacante externo. Basta <strong class="text-purple-400">prompt injection</strong> — um documento que o agente lê em contexto e que reescreve o objetivo dele. Nesse momento, qualquer tool que executa código passa a ser <em>código do atacante</em>. A sandbox existe para assumir que isso <strong>vai</strong> acontecer e limitar o dano.</p>
+        <p class="text-neutral-300">O agente nêo precisa ser comprometido por um atacante externo. Basta <strong class="text-purple-400">prompt injection</strong> — um documento que o agente lê em contexto e que reescreve o objetivo dele. Nesse momento, qualquer tool que executa código passa a ser <em>código do atacante</em>. A sandbox existe para assumir que isso <strong>vai</strong> acontecer e limitar o dano.</p>
       </div>
     </section>
 
@@ -187,7 +187,7 @@
         <h2 class="text-2xl font-bold">🚧 Isolamento, quotas e imagem</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        "Docker já isola" é só metade da verdade. O container bloqueia acesso ao FS do host, mas não limita CPU, memória, egress ou pacotes instalados <em>por padrão</em>. É preciso configurar explicitamente. No modo K8s do DeerFlow, esses controles são primeira-classe via policies do Pod.
+        "Docker já isola" é só metade da verdade. O container bloqueia acesso ao FS do host, mas nêo limita CPU, memória, egress ou pacotes instalados <em>por padrêo</em>. É preciso configurar explicitamente. No modo K8s do DeerFlow, esses controles sêo primeira-classe via policies do Pod.
       </p>
 
       <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
@@ -229,7 +229,7 @@ spec:
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
-        <p class="text-neutral-300">Não fique tentado a dar <code>NET_ADMIN</code> ou <code>SYS_PTRACE</code> "só para debugar". Se precisar, crie um namespace K8s "dev" separado do "prod" e deixe claro que é descartável. <strong>Capabilities não voltam para a caixa</strong> depois que um incidente acontece.</p>
+        <p class="text-neutral-300">Nêo fique tentado a dar <code>NET_ADMIN</code> ou <code>SYS_PTRACE</code> "só para debugar". Se precisar, crie um namespace K8s "dev" separado do "prod" e deixe claro que é descartável. <strong>Capabilities nêo voltam para a caixa</strong> depois que um incidente acontece.</p>
       </div>
     </section>
 
@@ -240,7 +240,7 @@ spec:
         <h2 class="text-2xl font-bold">📄 Leitura guiada de SECURITY.md</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        O arquivo <strong class="text-purple-400">SECURITY.md</strong> do repositório é o documento mais autoritativo do projeto sobre risco. A maioria dos usuários nunca o abre. Esta seção faz o passeio: o que está lá, o que não está, e por que cada recomendação existe.
+        O arquivo <strong class="text-purple-400">SECURITY.md</strong> do repositório é o documento mais autoritativo do projeto sobre risco. A maioria dos usuários nunca o abre. Esta seçêo faz o passeio: o que está lá, o que nêo está, e por que cada recomendaçêo existe.
       </p>
 
       <div class="space-y-6 mb-6">
@@ -249,7 +249,7 @@ spec:
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Threat model explícito</h4>
             <p class="text-sm text-neutral-400 mb-3">O que o DeerFlow assume que pode acontecer — e o que diz estar fora de escopo</p>
-            <p class="text-neutral-300 text-sm">Lista ameaças cobertas (prompt injection, tool misuse, secret exposure em logs) e deixa fora (atacante com acesso físico ao host). Saber o que não é problema do projeto é tão importante quanto saber o que é.</p>
+            <p class="text-neutral-300 text-sm">Lista ameaças cobertas (prompt injection, tool misuse, secret exposure em logs) e deixa fora (atacante com acesso físico ao host). Saber o que nêo é problema do projeto é têo importante quanto saber o que é.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -265,7 +265,7 @@ spec:
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Canal de reporte</h4>
             <p class="text-sm text-neutral-400 mb-3">Private disclosure, PGP, SLA de resposta</p>
-            <p class="text-neutral-300 text-sm">Endereço oficial (<code>security@</code>), chave PGP pública e o compromisso de primeira resposta em até 72h. Issue público não é lugar para CVE — o SECURITY.md fala isso em negrito.</p>
+            <p class="text-neutral-300 text-sm">Endereço oficial (<code>security@</code>), chave PGP pública e o compromisso de primeira resposta em até 72h. Issue público nêo é lugar para CVE — o SECURITY.md fala isso em negrito.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -273,7 +273,7 @@ spec:
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Recomendações de deploy</h4>
             <p class="text-sm text-neutral-400 mb-3">Lista mínima do que precisa estar ligado em prod</p>
-            <p class="text-neutral-300 text-sm">TLS, auth obrigatória no API gateway, sandbox Docker ou K8s (nunca Local), secrets via gerenciador (não .env no repo), logs sem PII. Cada bullet vira um item de checklist antes de go-live.</p>
+            <p class="text-neutral-300 text-sm">TLS, auth obrigatória no API gateway, sandbox Docker ou K8s (nunca Local), secrets via gerenciador (nêo .env no repo), logs sem PII. Cada bullet vira um item de checklist antes de go-live.</p>
           </div>
         </div>
       </div>
@@ -286,24 +286,24 @@ spec:
         <h2 class="text-2xl font-bold">⚠️ Alertas de deploy — o que o README adverte</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        O README do DeerFlow tem uma seção curta e explícita sobre o que <strong>não fazer</strong> em deploy. É uma lista de armadilhas que parecem pequenas em dev e viram incidentes em produção. Elas se repetem porque ninguém lê.
+        O README do DeerFlow tem uma seçêo curta e explícita sobre o que <strong>nêo fazer</strong> em deploy. É uma lista de armadilhas que parecem pequenas em dev e viram incidentes em produçêo. Elas se repetem porque ninguém lê.
       </p>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-red-400 mb-4 flex items-center"><span class="mr-2">🚨</span> As 6 armadilhas clássicas</h3>
         <ul class="space-y-3 text-neutral-300 text-sm">
-          <li class="flex items-start space-x-2"><span class="text-red-400 mt-1 font-bold">1.</span><span><strong>Sandbox: local em produção.</strong> "Só enquanto resolvemos o Docker." Nunca é só. Vira default e o incidente chega em 3 meses.</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400 mt-1 font-bold">2.</span><span><strong>API gateway sem autenticação.</strong> Conveniente em staging, catastrófico em prod. Qualquer um que ache a URL ganha um agente com suas credenciais.</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400 mt-1 font-bold">3.</span><span><strong>Secrets no prompt do sistema.</strong> Ficam no histórico, vão para logs, vão para traces, vão para memória. Use injeção via tool, nunca via prompt.</span></li>
+          <li class="flex items-start space-x-2"><span class="text-red-400 mt-1 font-bold">1.</span><span><strong>Sandbox: local em produçêo.</strong> "Só enquanto resolvemos o Docker." Nunca é só. Vira default e o incidente chega em 3 meses.</span></li>
+          <li class="flex items-start space-x-2"><span class="text-red-400 mt-1 font-bold">2.</span><span><strong>API gateway sem autenticaçêo.</strong> Conveniente em staging, catastrófico em prod. Qualquer um que ache a URL ganha um agente com suas credenciais.</span></li>
+          <li class="flex items-start space-x-2"><span class="text-red-400 mt-1 font-bold">3.</span><span><strong>Secrets no prompt do sistema.</strong> Ficam no histórico, vêo para logs, vêo para traces, vêo para memória. Use injeçêo via tool, nunca via prompt.</span></li>
           <li class="flex items-start space-x-2"><span class="text-red-400 mt-1 font-bold">4.</span><span><strong>Tool irrestrita (curl, bash, fs.write).</strong> Qualquer uma que execute comando arbitrário precisa estar atrás de allow-list e com input validado.</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400 mt-1 font-bold">5.</span><span><strong>Logs com PII.</strong> Mensagens de usuário gravadas íntegras em Elasticsearch com retenção infinita. LGPD manda lembrança.</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400 mt-1 font-bold">6.</span><span><strong>Docker socket montado.</strong> "O agente precisa iniciar containers." Não precisa — você precisa de uma interface mediada. Docker socket = root no host.</span></li>
+          <li class="flex items-start space-x-2"><span class="text-red-400 mt-1 font-bold">5.</span><span><strong>Logs com PII.</strong> Mensagens de usuário gravadas íntegras em Elasticsearch com retençêo infinita. LGPD manda lembrança.</span></li>
+          <li class="flex items-start space-x-2"><span class="text-red-400 mt-1 font-bold">6.</span><span><strong>Docker socket montado.</strong> "O agente precisa iniciar containers." Nêo precisa — você precisa de uma interface mediada. Docker socket = root no host.</span></li>
         </ul>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Checklist antes de go-live</h3>
-        <p class="text-neutral-300">Imprima as 6 armadilhas, cole no Jira, peça que um humano dê OK em cada uma antes do deploy. Não delegue para o agente decidir se ele próprio está seguro — ele sempre vai dizer que sim.</p>
+        <p class="text-neutral-300">Imprima as 6 armadilhas, cole no Jira, peça que um humano dê OK em cada uma antes do deploy. Nêo delegue para o agente decidir se ele próprio está seguro — ele sempre vai dizer que sim.</p>
       </div>
     </section>
 
@@ -356,8 +356,8 @@ spec:
       </div>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Se algum teste passar quando não deveria</h3>
-        <p class="text-neutral-300">Pare o lab. Sua config de K8s não está aplicando os limits. Revise <code>securityContext</code>, <code>resources.limits</code> e <code>NetworkPolicy</code>. Um deploy que deixa o script A funcionar em laboratório <strong>vai</strong> deixar um exfiltrador funcionar em produção.</p>
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Se algum teste passar quando nêo deveria</h3>
+        <p class="text-neutral-300">Pare o lab. Sua config de K8s nêo está aplicando os limits. Revise <code>securityContext</code>, <code>resources.limits</code> e <code>NetworkPolicy</code>. Um deploy que deixa o script A funcionar em laboratório <strong>vai</strong> deixar um exfiltrador funcionar em produçêo.</p>
       </div>
     </section>
 
@@ -369,7 +369,7 @@ spec:
         <div class="space-y-4 mb-8">
           <div class="flex items-start space-x-3">
             <span class="text-purple-400 mt-1">✓</span>
-            <div><strong class="text-white">Local, Docker, K8s é escada de risco</strong><span class="text-neutral-400"> — cada degrau assume que o de baixo falha. Em produção, só K8s passa no teste de ameaça honesto.</span></div>
+            <div><strong class="text-white">Local, Docker, K8s é escada de risco</strong><span class="text-neutral-400"> — cada degrau assume que o de baixo falha. Em produçêo, só K8s passa no teste de ameaça honesto.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-purple-400 mt-1">✓</span>
@@ -377,7 +377,7 @@ spec:
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-purple-400 mt-1">✓</span>
-            <div><strong class="text-white">As 4 camadas: recursos, rede, FS, imagem</strong><span class="text-neutral-400"> — todas precisam estar fechadas. Fechar só 3 não vale nada — o atacante usa a aberta.</span></div>
+            <div><strong class="text-white">As 4 camadas: recursos, rede, FS, imagem</strong><span class="text-neutral-400"> — todas precisam estar fechadas. Fechar só 3 nêo vale nada — o atacante usa a aberta.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-purple-400 mt-1">✓</span>
@@ -396,7 +396,7 @@ spec:
         <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
           <h3 class="font-semibold text-purple-400 mb-2">Próximo Módulo:</h3>
           <p class="text-neutral-300">3.3 — 💾 Memória avançada e context engineering</p>
-          <p class="text-neutral-400 text-sm mt-1">Do "existe memória" do módulo 1.1 para compactação, recall semântico e memory poisoning.</p>
+          <p class="text-neutral-400 text-sm mt-1">Do "existe memória" do módulo 1.1 para compactaçêo, recall semântico e memory poisoning.</p>
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-start">

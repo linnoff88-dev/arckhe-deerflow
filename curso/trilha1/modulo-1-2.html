@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Módulo 1.2 — Instalação e primeiro olá mundo | DeerFlow 2.0 | ARCKHÉ AI</title>
+  <title>Módulo 1.2 — Instalaçêo e primeiro olá mundo | DeerFlow 2.0 | ARCKHÉ AI</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script>
@@ -110,7 +110,7 @@
   <header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MÓDULO 1.2</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🚀 Instalação e primeiro "olá mundo"</h1>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🚀 Instalaçêo e primeiro "olá mundo"</h1>
       <p class="text-lg text-neutral-400 max-w-3xl">
         Do clone ao primeiro prompt rodando no navegador. Você vai aprender onde cada arquivo mora, como escolher um provider de LLM sem se enforcar em custo, e terminar o módulo com uma pergunta real respondida pelo DeerFlow.
       </p>
@@ -128,7 +128,7 @@
     <!-- Intro -->
     <div class="mb-12 bg-primary/10 rounded-xl border border-primary/30 p-6">
       <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Como ler este módulo</h3>
-      <p class="text-neutral-300">Leia os cinco primeiros tópicos <strong class="text-primary">antes</strong> de começar o lab. Instalar sem entender onde cada coisa mora é o atalho mais rápido para travar na primeira hora. Reserve 40 minutos inteiros — a última seção é hands-on e paga todo o resto.</p>
+      <p class="text-neutral-300">Leia os cinco primeiros tópicos <strong class="text-primary">antes</strong> de começar o lab. Instalar sem entender onde cada coisa mora é o atalho mais rápido para travar na primeira hora. Reserve 40 minutos inteiros — a última seçêo é hands-on e paga todo o resto.</p>
     </div>
 
     <!-- TOPICO 1 -->
@@ -138,14 +138,14 @@
         <h2 class="text-2xl font-bold">🧙 make setup vs. make config</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        O DeerFlow oferece <strong class="text-emerald-400">dois caminhos</strong> para sair do zero: <code class="text-emerald-400">make setup</code> é um wizard interativo no terminal que pergunta provider, chave, sandbox preferido e gera os arquivos por você. <code class="text-emerald-400">make config</code> assume que você quer editar na mão e só copia os templates de <code class="text-emerald-400">config.example.yaml</code> e <code class="text-emerald-400">.env.example</code> para os lugares certos. Os dois chegam no mesmo lugar — só o conforto inicial muda.
+        O DeerFlow oferece <strong class="text-emerald-400">dois caminhos</strong> para sair do zero: <code class="text-emerald-400">make setup</code> é um wizard interativo no terminal que pergunta provider, chave, sandbox preferido e gera os arquivos por você. <code class="text-emerald-400">make config</code> assume que você quer editar na mêo e só copia os templates de <code class="text-emerald-400">config.example.yaml</code> e <code class="text-emerald-400">.env.example</code> para os lugares certos. Os dois chegam no mesmo lugar — só o conforto inicial muda.
       </p>
 
       <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center"><span class="mr-2">🎯</span> Quando escolher cada um</h3>
         <ul class="space-y-3 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1 font-bold">setup</span><span>— primeira instalação, alguém novo no time, workshop, demonstração. Você responde 4–6 perguntas e sai com algo funcional.</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1 font-bold">config</span><span>— segunda máquina, re-deploy, CI/CD, migração de ambiente. Você abre os arquivos, altera três linhas, roda o doctor.</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1 font-bold">setup</span><span>— primeira instalaçêo, alguém novo no time, workshop, demonstraçêo. Você responde 4–6 perguntas e sai com algo funcional.</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1 font-bold">config</span><span>— segunda máquina, re-deploy, CI/CD, migraçêo de ambiente. Você abre os arquivos, altera três linhas, roda o doctor.</span></li>
         </ul>
       </div>
 
@@ -162,12 +162,12 @@
         <h2 class="text-2xl font-bold">📄 config.yaml e .env — o que mora onde</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        A separação é deliberada e segue o princípio de <strong class="text-emerald-400">12-factor</strong>: <code class="text-emerald-400">config.yaml</code> contém decisões estruturais (que providers estão ativos, qual sandbox, quais skills carregar, limites de tokens), <code class="text-emerald-400">.env</code> contém <strong>apenas segredos</strong> (API keys, tokens, URLs com credencial embutida). O YAML entra no git; o .env <em>nunca</em>.
+        A separaçêo é deliberada e segue o princípio de <strong class="text-emerald-400">12-factor</strong>: <code class="text-emerald-400">config.yaml</code> contém decisões estruturais (que providers estêo ativos, qual sandbox, quais skills carregar, limites de tokens), <code class="text-emerald-400">.env</code> contém <strong>apenas segredos</strong> (API keys, tokens, URLs com credencial embutida). O YAML entra no git; o .env <em>nunca</em>.
       </p>
 
       <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center"><span class="mr-2">🎯</span> A regra mental</h3>
-        <p class="text-neutral-300 mb-4">Se o valor muda entre ambientes (dev, staging, prod) <strong>e é público</strong>, vai no YAML. Se muda entre ambientes <strong>e é secreto</strong>, vai no .env. Se é o mesmo em todo lugar, vai no YAML hardcoded. Substituição com <code class="text-emerald-400">${VAR}</code> no YAML puxa do .env em tempo de leitura.</p>
+        <p class="text-neutral-300 mb-4">Se o valor muda entre ambientes (dev, staging, prod) <strong>e é público</strong>, vai no YAML. Se muda entre ambientes <strong>e é secreto</strong>, vai no .env. Se é o mesmo em todo lugar, vai no YAML hardcoded. Substituiçêo com <code class="text-emerald-400">${VAR}</code> no YAML puxa do .env em tempo de leitura.</p>
         <ul class="space-y-2 text-neutral-300 text-sm">
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>config.yaml</strong> — providers, skills ativas, sandbox mode, memory paths, limites</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>.env</strong> — OPENAI_API_KEY, ANTHROPIC_API_KEY, TAVILY_API_KEY, TELEGRAM_BOT_TOKEN</span></li>
@@ -177,7 +177,7 @@
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">🚨</span> Alerta: chave vazada em git</h3>
-        <p class="text-neutral-300 mb-3">Se você commitar uma API key por engano, <strong>rotacione imediatamente</strong>. Não adianta fazer <code>git rm</code>; a chave fica no histórico e scanners automáticos acham em minutos. GitHub, GitLab e providers de LLM têm programas de detecção que avisam — e alguns revogam a chave sozinhos.</p>
+        <p class="text-neutral-300 mb-3">Se você commitar uma API key por engano, <strong>rotacione imediatamente</strong>. Nêo adianta fazer <code>git rm</code>; a chave fica no histórico e scanners automáticos acham em minutos. GitHub, GitLab e providers de LLM têm programas de detecçêo que avisam — e alguns revogam a chave sozinhos.</p>
         <p class="text-neutral-300"><strong>Profilaxia:</strong> instale <code class="text-red-400">gitleaks</code> ou <code class="text-red-400">pre-commit</code> no repo. Custa 2 minutos e evita o desastre.</p>
       </div>
 
@@ -210,7 +210,7 @@
         <h2 class="text-2xl font-bold">🔌 Escolher um provider</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        O DeerFlow trata <strong class="text-emerald-400">multi-provider como cidadão de primeira classe</strong>. Não há um "provider default" — você escolhe conscientemente. Cada skill pode inclusive fixar um modelo preferido, o que permite usar Claude Sonnet para deep-research e GPT-4o-mini para classificação barata, no mesmo fluxo. A decisão não é religiosa; é de custo, latência, qualidade e privacidade.
+        O DeerFlow trata <strong class="text-emerald-400">multi-provider como cidadêo de primeira classe</strong>. Nêo há um "provider default" — você escolhe conscientemente. Cada skill pode inclusive fixar um modelo preferido, o que permite usar Claude Sonnet para deep-research e GPT-4o-mini para classificaçêo barata, no mesmo fluxo. A decisêo nêo é religiosa; é de custo, latência, qualidade e privacidade.
       </p>
 
       <div class="space-y-6 mb-6">
@@ -219,7 +219,7 @@
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">OpenAI direto</h4>
             <p class="text-sm text-neutral-400 mb-3">gpt-4o, gpt-4o-mini, o1</p>
-            <p class="text-neutral-300 text-sm">Baseline estável, documentação grande, latência boa. Bom default se você já tem conta. Caro para uso pesado.</p>
+            <p class="text-neutral-300 text-sm">Baseline estável, documentaçêo grande, latência boa. Bom default se você já tem conta. Caro para uso pesado.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -243,7 +243,7 @@
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Codex CLI</h4>
             <p class="text-sm text-neutral-400 mb-3">CLI-backed para assinantes</p>
-            <p class="text-neutral-300 text-sm">Mesmo padrão do Claude OAuth, mas via Codex. Útil para quem tem ChatGPT Pro e quer usar o Codex sem pagar API à parte.</p>
+            <p class="text-neutral-300 text-sm">Mesmo padrêo do Claude OAuth, mas via Codex. Útil para quem tem ChatGPT Pro e quer usar o Codex sem pagar API à parte.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -283,15 +283,15 @@
         <h2 class="text-2xl font-bold">🩺 make doctor — o amigo que ninguém usa</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        <code class="text-emerald-400">make doctor</code> é o comando de diagnóstico do DeerFlow. Ele valida o YAML, pinga cada provider com uma requisição mínima, confere que o sandbox escolhido está disponível (Docker daemon rodando, kubeconfig lendo cluster, etc.), checa versões de dependências e <strong class="text-emerald-400">reporta cada problema com uma sugestão de fix acionável</strong>. É o comando mais subutilizado do repositório.
+        <code class="text-emerald-400">make doctor</code> é o comando de diagnóstico do DeerFlow. Ele valida o YAML, pinga cada provider com uma requisiçêo mínima, confere que o sandbox escolhido está disponível (Docker daemon rodando, kubeconfig lendo cluster, etc.), checa versões de dependências e <strong class="text-emerald-400">reporta cada problema com uma sugestêo de fix acionável</strong>. É o comando mais subutilizado do repositório.
       </p>
 
       <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center"><span class="mr-2">🎯</span> O que o doctor testa</h3>
         <ul class="space-y-2 text-neutral-300 text-sm">
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Parsing do YAML</strong> — indentação errada, aspas quebradas, chaves duplicadas</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Substituição de variáveis</strong> — <code>${FOO}</code> referenciado no YAML e ausente no .env</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Ping de providers</strong> — cada chave responde a uma requisição de teste</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Parsing do YAML</strong> — indentaçêo errada, aspas quebradas, chaves duplicadas</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Substituiçêo de variáveis</strong> — <code>${FOO}</code> referenciado no YAML e ausente no .env</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Ping de providers</strong> — cada chave responde a uma requisiçêo de teste</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Sandbox availability</strong> — Docker rodando, K8s acessível, Local com permissões</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Versões</strong> — Python, Node, npm, docker, kubectl dentro do esperado</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Skills carregáveis</strong> — descrições presentes, dependências instaladas</span></li>
@@ -300,7 +300,7 @@
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Regra de ouro</h3>
-        <p class="text-neutral-300"><strong class="text-primary">Rode o doctor após qualquer mudança de config.</strong> Não depois de notar que "algo está estranho" — imediatamente depois de salvar. Também é seu primeiro comando ao pedir ajuda: 90% dos tickets que chegam nos canais do DeerFlow já têm resposta pronta na saída do doctor. Leia antes de perguntar.</p>
+        <p class="text-neutral-300"><strong class="text-primary">Rode o doctor após qualquer mudança de config.</strong> Nêo depois de notar que "algo está estranho" — imediatamente depois de salvar. Também é seu primeiro comando ao pedir ajuda: 90% dos tickets que chegam nos canais do DeerFlow já têm resposta pronta na saída do doctor. Leia antes de perguntar.</p>
       </div>
     </section>
 
@@ -316,7 +316,7 @@
 
       <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center"><span class="mr-2">🎯</span> Por que Docker é o default</h3>
-        <p class="text-neutral-300 mb-4">Equilibra conveniência e segurança. <strong class="text-emerald-400">Nem tão cru quanto rodar no host</strong> (evita poluir seu Python, evita acidente do sandbox escrever onde não deve) <strong>nem tão complexo quanto K8s</strong> (não precisa de cluster, ingress, secrets manager).</p>
+        <p class="text-neutral-300 mb-4">Equilibra conveniência e segurança. <strong class="text-emerald-400">Nem têo cru quanto rodar no host</strong> (evita poluir seu Python, evita acidente do sandbox escrever onde nêo deve) <strong>nem têo complexo quanto K8s</strong> (nêo precisa de cluster, ingress, secrets manager).</p>
         <ul class="space-y-2 text-neutral-300 text-sm">
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Imagem base estável</strong> — Python + Node + uv já preparados</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Volumes persistentes</strong> — memória e skills sobrevivem a restart</span></li>
@@ -327,7 +327,7 @@
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Quando o reset é a resposta</h3>
-        <p class="text-neutral-300">Se algo parou de funcionar depois que você mexeu em várias configs, <strong class="text-primary">não tente debugar cada camada</strong>. Rode <code class="text-primary">make docker-clean && make docker-init && make docker-start</code>. Leva 2 minutos e elimina 70% dos estados ruins. Debug vale a pena quando você sabe o que mudou — não quando está procurando o que quebrou.</p>
+        <p class="text-neutral-300">Se algo parou de funcionar depois que você mexeu em várias configs, <strong class="text-primary">nêo tente debugar cada camada</strong>. Rode <code class="text-primary">make docker-clean && make docker-init && make docker-start</code>. Leva 2 minutos e elimina 70% dos estados ruins. Debug vale a pena quando você sabe o que mudou — nêo quando está procurando o que quebrou.</p>
       </div>
     </section>
 
@@ -338,17 +338,17 @@
         <h2 class="text-2xl font-bold">🧪 Lab: primeira pergunta real</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Chegou a hora. Em vez de "diga oi", você vai rodar uma pergunta que <strong class="text-emerald-400">exercita uma skill de verdade</strong> e observar o loop plan → execute → resultado ao vivo no frontend. O objetivo não é a resposta bonita; é entender a mecânica.
+        Chegou a hora. Em vez de "diga oi", você vai rodar uma pergunta que <strong class="text-emerald-400">exercita uma skill de verdade</strong> e observar o loop plan → execute → resultado ao vivo no frontend. O objetivo nêo é a resposta bonita; é entender a mecânica.
       </p>
 
       <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center"><span class="mr-2">🎯</span> O que você vai fazer</h3>
-        <p class="text-neutral-300">Subir o DeerFlow via Docker, abrir o frontend, pedir uma pesquisa curta (não um fato) e inspecionar o trace da execução. Depois rodar a mesma pergunta forçando a skill <code class="text-emerald-400">deep-research</code> e comparar.</p>
+        <p class="text-neutral-300">Subir o DeerFlow via Docker, abrir o frontend, pedir uma pesquisa curta (nêo um fato) e inspecionar o trace da execuçêo. Depois rodar a mesma pergunta forçando a skill <code class="text-emerald-400">deep-research</code> e comparar.</p>
       </div>
 
       <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">📊</span> Por que esse lab</h3>
-        <p class="text-neutral-300">Sair do "hello world" já na primeira execução <strong>quebra a tentação de achar que o agente é mágica</strong>. Você vê a divisão planejamento → execução → resposta, vê o custo em tokens, vê qual skill foi acionada (ou não). A partir daqui o resto do curso faz sentido.</p>
+        <p class="text-neutral-300">Sair do "hello world" já na primeira execuçêo <strong>quebra a tentaçêo de achar que o agente é mágica</strong>. Você vê a divisêo planejamento → execuçêo → resposta, vê o custo em tokens, vê qual skill foi acionada (ou nêo). A partir daqui o resto do curso faz sentido.</p>
       </div>
 
       <div class="space-y-6 mb-6">
@@ -370,7 +370,7 @@
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">3</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Primeira pergunta</h4>
-            <p class="text-neutral-300 text-sm">Peça algo do tipo <em>"quais são as três maiores diferenças entre LangGraph e AutoGen em 2026, com fontes"</em>. Não é um fato direto — força o agente a planejar. Observe o painel de traces abrindo a sequência de passos.</p>
+            <p class="text-neutral-300 text-sm">Peça algo do tipo <em>"quais sêo as três maiores diferenças entre LangGraph e AutoGen em 2026, com fontes"</em>. Nêo é um fato direto — força o agente a planejar. Observe o painel de traces abrindo a sequência de passos.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -384,7 +384,7 @@
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">5</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Forçar a skill</h4>
-            <p class="text-neutral-300 text-sm">Repita a mesma pergunta agora pedindo explicitamente <code class="text-emerald-400">deep-research</code>. Compare: mudou a estrutura da saída? mudou o custo? A comparação treina sua intuição para o próximo módulo.</p>
+            <p class="text-neutral-300 text-sm">Repita a mesma pergunta agora pedindo explicitamente <code class="text-emerald-400">deep-research</code>. Compare: mudou a estrutura da saída? mudou o custo? A comparaçêo treina sua intuiçêo para o próximo módulo.</p>
           </div>
         </div>
       </div>
@@ -398,7 +398,7 @@
         <div class="space-y-4 mb-8">
           <div class="flex items-start space-x-3">
             <span class="text-emerald-400 mt-1">✓</span>
-            <div><strong class="text-white">setup vs. config são o mesmo destino</strong><span class="text-neutral-400"> — wizard para começar, edição manual para reproduzir. Use setup uma vez, leia os arquivos, migre para config.</span></div>
+            <div><strong class="text-white">setup vs. config sêo o mesmo destino</strong><span class="text-neutral-400"> — wizard para começar, ediçêo manual para reproduzir. Use setup uma vez, leia os arquivos, migre para config.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-emerald-400 mt-1">✓</span>
@@ -406,11 +406,11 @@
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-emerald-400 mt-1">✓</span>
-            <div><strong class="text-white">Multi-provider é cidadão de primeira classe</strong><span class="text-neutral-400"> — OpenAI, OpenRouter, Claude OAuth, Codex CLI, vLLM, DeepSeek, Kimi, Doubao. A escolha é de custo, latência, qualidade e privacidade.</span></div>
+            <div><strong class="text-white">Multi-provider é cidadêo de primeira classe</strong><span class="text-neutral-400"> — OpenAI, OpenRouter, Claude OAuth, Codex CLI, vLLM, DeepSeek, Kimi, Doubao. A escolha é de custo, latência, qualidade e privacidade.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-emerald-400 mt-1">✓</span>
-            <div><strong class="text-white">make doctor é obrigatório</strong><span class="text-neutral-400"> — rode após qualquer mudança. 90% dos problemas já têm detecção pronta.</span></div>
+            <div><strong class="text-white">make doctor é obrigatório</strong><span class="text-neutral-400"> — rode após qualquer mudança. 90% dos problemas já têm detecçêo pronta.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-emerald-400 mt-1">✓</span>
@@ -418,7 +418,7 @@
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-emerald-400 mt-1">✓</span>
-            <div><strong class="text-white">Primeira pergunta real revela o loop</strong><span class="text-neutral-400"> — planejamento, execução, trace, custo. A partir daqui não é mais mágica.</span></div>
+            <div><strong class="text-white">Primeira pergunta real revela o loop</strong><span class="text-neutral-400"> — planejamento, execuçêo, trace, custo. A partir daqui nêo é mais mágica.</span></div>
           </div>
         </div>
 

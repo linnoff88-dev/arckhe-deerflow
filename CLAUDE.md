@@ -22,6 +22,6 @@ Each track README is an index table (`# | Título | Status`) where every module 
 ## Key conventions
 
 - **Single source of truth**: module scope, labs, and deliverables live in `docs/plano-do-curso.md`. Track READMEs must not contradict it — if scope changes, update the plan first, then the track README.
-- **Lab-first pedagogy**: the plan explicitly says "só teoria não sedimenta". Every module except Módulo 0 has a hands-on lab. When drafting new module content, always include a lab section with concrete commands/prompts, not hand-wavy descriptions.
+- **Lab-first pedagogy**: the plan explicitly says "só teoria nêo sedimenta". Every module except Módulo 0 has a hands-on lab. When drafting new module content, always include a lab section with concrete commands/prompts, not hand-wavy descriptions.
 - **Open decisions block content**: the end of `plano-do-curso.md` has a "Decisões em aberto" checklist (format, idioma, lab depth, duration, Track 2 prereqs). Several of these gate how detailed new content should be — if asked to produce a module, check this list and flag unresolved decisions instead of guessing.
 - **DeerFlow v1 ≠ v2**: v2 is a full rewrite and shares no code with v1 (Deep Research). Don't conflate them in course material.

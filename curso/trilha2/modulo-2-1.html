@@ -130,7 +130,7 @@
     <!-- Intro -->
     <div class="mb-12 bg-primary/10 rounded-xl border border-primary/30 p-6">
       <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Como ler este módulo</h3>
-      <p class="text-neutral-300">Assumo que você já terminou a Trilha 1 — sabe o que é skill, sub-agent e memória. Agora vamos descer ao esqueleto. Se uma seção parecer teórica demais, pule para o <strong class="text-primary">Lab no tópico 6</strong> e volte depois; o trace no LangSmith torna tudo concreto em minutos.</p>
+      <p class="text-neutral-300">Assumo que você já terminou a Trilha 1 — sabe o que é skill, sub-agent e memória. Agora vamos descer ao esqueleto. Se uma seçêo parecer teórica demais, pule para o <strong class="text-primary">Lab no tópico 6</strong> e volte depois; o trace no LangSmith torna tudo concreto em minutos.</p>
     </div>
 
     <!-- TOPICO 1 -->
@@ -140,7 +140,7 @@
         <h2 class="text-2xl font-bold">🧭 O que é LangGraph no DeerFlow</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        <strong class="text-blue-400">LangGraph</strong> é a biblioteca da LangChain que o DeerFlow usa como substrato do lead_agent. O modelo mental é simples: um <em>grafo direcionado</em> onde cada <strong>node</strong> é uma função Python que recebe um <em>state</em> compartilhado e devolve um patch desse state; cada <strong>edge</strong> decide o próximo node com base no state resultante. Não há mágica — é um loop que lê o state, executa um node, aplica o patch, consulta as edges e avança.
+        <strong class="text-blue-400">LangGraph</strong> é a biblioteca da LangChain que o DeerFlow usa como substrato do lead_agent. O modelo mental é simples: um <em>grafo direcionado</em> onde cada <strong>node</strong> é uma funçêo Python que recebe um <em>state</em> compartilhado e devolve um patch desse state; cada <strong>edge</strong> decide o próximo node com base no state resultante. Nêo há mágica — é um loop que lê o state, executa um node, aplica o patch, consulta as edges e avança.
       </p>
 
       <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
@@ -149,14 +149,14 @@
         <ul class="space-y-2 text-neutral-300 text-sm">
           <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>State</strong> — TypedDict/Pydantic com reducers que definem como cada campo é merjado (append em listas, replace em escalares).</span></li>
           <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Nodes</strong> — funções puras <code class="text-blue-400">(state) -&gt; partial_state</code>. Sem efeito colateral fora do state, toda IO vai por tool.</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Edges condicionais</strong> — roteamento decidido por uma função que olha o state. É aqui que o agente "decide".</span></li>
+          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Edges condicionais</strong> — roteamento decidido por uma funçêo que olha o state. É aqui que o agente "decide".</span></li>
           <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Checkpointer</strong> — salva o state a cada passo num backend (SQLite/Postgres). Crash recovery sai de graça.</span></li>
         </ul>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Por que grafo e não pipeline</h3>
-        <p class="text-neutral-300">Pipeline assume que você sabe a ordem dos passos antes de começar. Um agente não sabe — precisa decidir "chamo a skill de research ou pergunto de volta?" olhando o state atual. Grafo com edge condicional representa isso nativamente; pipeline exige um dispatcher por fora e você reinventa metade do LangGraph até o fim do mês.</p>
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Por que grafo e nêo pipeline</h3>
+        <p class="text-neutral-300">Pipeline assume que você sabe a ordem dos passos antes de começar. Um agente nêo sabe — precisa decidir "chamo a skill de research ou pergunto de volta?" olhando o state atual. Grafo com edge condicional representa isso nativamente; pipeline exige um dispatcher por fora e você reinventa metade do LangGraph até o fim do mês.</p>
       </div>
     </section>
 
@@ -167,16 +167,16 @@
         <h2 class="text-2xl font-bold">🧠 O grafo do lead_agent</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        O lead_agent do DeerFlow é, no fundo, um grafo minúsculo com cinco nodes e duas edges condicionais. Tudo que você vê acontecer numa sessão — plano, chamada de skill, execução de tool, reflexão, resposta final — passa por eles. Entender essa topologia é o que torna trivial depurar qualquer comportamento estranho.
+        O lead_agent do DeerFlow é, no fundo, um grafo minúsculo com cinco nodes e duas edges condicionais. Tudo que você vê acontecer numa sessêo — plano, chamada de skill, execuçêo de tool, reflexêo, resposta final — passa por eles. Entender essa topologia é o que torna trivial depurar qualquer comportamento estranho.
       </p>
 
       <div class="space-y-6 mb-6">
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">1</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">entry — recepção do turno</h4>
+            <h4 class="font-semibold text-white mb-2">entry — recepçêo do turno</h4>
             <p class="text-sm text-neutral-400 mb-3">Normaliza input, carrega memórias relevantes, injeta guardrails</p>
-            <p class="text-neutral-300 text-sm">Recebe a mensagem do usuário, roda retrievers de memória, monta o system prompt com as instruções obrigatórias e publica tudo no state. Nenhuma decisão de negócio acontece aqui — só montagem.</p>
+            <p class="text-neutral-300 text-sm">Recebe a mensagem do usuário, roda retrievers de memória, monta o system prompt com as instruções obrigatórias e publica tudo no state. Nenhuma decisêo de negócio acontece aqui — só montagem.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -184,7 +184,7 @@
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">plan — chamada ao LLM</h4>
             <p class="text-sm text-neutral-400 mb-3">O modelo decide: responder direto, chamar skill, despachar custom agent</p>
-            <p class="text-neutral-300 text-sm">Única chamada "cara". O output vem como tool_calls estruturados. Aqui é onde trigger accuracy de skill vive ou morre — se a descrição da skill não bateu, o modelo vai ignorá-la.</p>
+            <p class="text-neutral-300 text-sm">Única chamada "cara". O output vem como tool_calls estruturados. Aqui é onde trigger accuracy de skill vive ou morre — se a descriçêo da skill nêo bateu, o modelo vai ignorá-la.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -198,9 +198,9 @@
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">4</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">act — execução de tool/skill</h4>
+            <h4 class="font-semibold text-white mb-2">act — execuçêo de tool/skill</h4>
             <p class="text-sm text-neutral-400 mb-3">Roda a tool, aplica middleware, grava resultado no state</p>
-            <p class="text-neutral-300 text-sm">Aqui entra o sandbox, o MCP client, o search provider, o filesystem. Errors são capturados e viram mensagens do sistema no state — o modelo lê e decide se tenta de novo. Depois volta para <code class="text-blue-400">plan</code>.</p>
+            <p class="text-neutral-300 text-sm">Aqui entra o sandbox, o MCP client, o search provider, o filesystem. Errors sêo capturados e viram mensagens do sistema no state — o modelo lê e decide se tenta de novo. Depois volta para <code class="text-blue-400">plan</code>.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -208,7 +208,7 @@
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">respond — saída do turno</h4>
             <p class="text-sm text-neutral-400 mb-3">Formata resposta final, persiste memórias novas, fecha trace</p>
-            <p class="text-neutral-300 text-sm">Passa pela camada de saída (formatação por canal: Slack, web, API), grava memórias "worth remembering" detectadas no turno, marca o checkpoint final e devolve ao chamador.</p>
+            <p class="text-neutral-300 text-sm">Passa pela camada de saída (formataçêo por canal: Slack, web, API), grava memórias "worth remembering" detectadas no turno, marca o checkpoint final e devolve ao chamador.</p>
           </div>
         </div>
       </div>
@@ -226,7 +226,7 @@
         <h2 class="text-2xl font-bold">🧩 Split harness ↔ app</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        O documento <strong class="text-blue-400">HARNESS_APP_SPLIT.md</strong> define uma fronteira que parece burocrática e não é: onde termina o <em>harness</em> (a engine do agente) e onde começa a <em>app</em> (o produto que usa essa engine). Errar esse recorte é o motivo número um de forks que quebram em toda atualização.
+        O documento <strong class="text-blue-400">HARNESS_APP_SPLIT.md</strong> define uma fronteira que parece burocrática e nêo é: onde termina o <em>harness</em> (a engine do agente) e onde começa a <em>app</em> (o produto que usa essa engine). Errar esse recorte é o motivo número um de forks que quebram em toda atualizaçêo.
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -248,7 +248,7 @@
             <li class="flex items-start space-x-2"><span class="text-neutral-400">•</span><span>Prompts e personalidade (SOUL)</span></li>
             <li class="flex items-start space-x-2"><span class="text-neutral-400">•</span><span>Canais de entrada (Slack, web, API)</span></li>
             <li class="flex items-start space-x-2"><span class="text-neutral-400">•</span><span>Credenciais, flags e config por ambiente</span></li>
-            <li class="flex items-start space-x-2"><span class="text-neutral-400">•</span><span>UI, autenticação, billing</span></li>
+            <li class="flex items-start space-x-2"><span class="text-neutral-400">•</span><span>UI, autenticaçêo, billing</span></li>
             <li class="flex items-start space-x-2"><span class="text-neutral-400">•</span><span>Logs de negócio e métricas de produto</span></li>
           </ul>
         </div>
@@ -267,23 +267,23 @@
         <h2 class="text-2xl font-bold">📐 Context engineering na prática</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Agora na Trilha 2 você precisa saber <em>como</em> o DeerFlow faz context engineering, não só que faz. São três políticas plugadas dentro do node <code class="text-blue-400">entry</code>: <strong class="text-blue-400">janela ativa</strong>, <strong class="text-blue-400">compactação</strong> e <strong class="text-blue-400">summarization por sub-agent</strong>. Cada uma resolve um problema diferente.
+        Agora na Trilha 2 você precisa saber <em>como</em> o DeerFlow faz context engineering, nêo só que faz. Sêo três políticas plugadas dentro do node <code class="text-blue-400">entry</code>: <strong class="text-blue-400">janela ativa</strong>, <strong class="text-blue-400">compactaçêo</strong> e <strong class="text-blue-400">summarization por sub-agent</strong>. Cada uma resolve um problema diferente.
       </p>
 
       <div class="bg-cyan-900/20 rounded-xl border border-cyan-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-cyan-400 mb-4 flex items-center"><span class="mr-2">📊</span> Dados do context engine</h3>
         <ul class="space-y-2 text-neutral-300 text-sm">
           <li><strong>Janela ativa</strong> — mantém as N últimas mensagens inteiras (default 20) + turno atual. Tudo mais antigo cai na pilha fria.</li>
-          <li><strong>Threshold de compactação</strong> — quando tokens ativos &gt; 70% da janela do modelo, dispara summarization do trecho mais antigo da pilha fria.</li>
-          <li><strong>Pin de guardrails</strong> — system prompt e instruções obrigatórias são ancorados no topo e nunca são compactados.</li>
+          <li><strong>Threshold de compactaçêo</strong> — quando tokens ativos &gt; 70% da janela do modelo, dispara summarization do trecho mais antigo da pilha fria.</li>
+          <li><strong>Pin de guardrails</strong> — system prompt e instruções obrigatórias sêo ancorados no topo e nunca sêo compactados.</li>
           <li><strong>Memórias seletivas</strong> — retriever só traz as 5 memórias mais relevantes por turno, com score mínimo de similaridade.</li>
-          <li><strong>Tool outputs grandes</strong> — resultados acima de ~4k tokens são sumarizados por sub-agent antes de voltar ao loop.</li>
+          <li><strong>Tool outputs grandes</strong> — resultados acima de ~4k tokens sêo sumarizados por sub-agent antes de voltar ao loop.</li>
         </ul>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Por que isso importa na depuração</h3>
-        <p class="text-neutral-300">Quando um agente "esquece" uma instrução a meio do turno, 9 em 10 vezes não é falha do modelo — é que o texto caiu na compactação. No LangSmith trace isso aparece claro: o node <code class="text-primary">entry</code> mostra o prompt montado, e você vê o que sobreviveu. <strong>Sempre olhe o prompt final antes de culpar o modelo.</strong></p>
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Por que isso importa na depuraçêo</h3>
+        <p class="text-neutral-300">Quando um agente "esquece" uma instruçêo a meio do turno, 9 em 10 vezes nêo é falha do modelo — é que o texto caiu na compactaçêo. No LangSmith trace isso aparece claro: o node <code class="text-primary">entry</code> mostra o prompt montado, e você vê o que sobreviveu. <strong>Sempre olhe o prompt final antes de culpar o modelo.</strong></p>
       </div>
     </section>
 
@@ -294,7 +294,7 @@
         <h2 class="text-2xl font-bold">🚧 Guardrails</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        <strong class="text-blue-400">Guardrail</strong>, no DeerFlow, é uma instrução ancorada no system prompt que <strong>não pode ser sobrescrita nem pelo usuário nem por skill</strong>. Ele vive num slot protegido do context engine; compactação, memória e prompts de skills não o tocam. É o único lugar onde "instrução obrigatória" realmente significa obrigatório.
+        <strong class="text-blue-400">Guardrail</strong>, no DeerFlow, é uma instruçêo ancorada no system prompt que <strong>nêo pode ser sobrescrita nem pelo usuário nem por skill</strong>. Ele vive num slot protegido do context engine; compactaçêo, memória e prompts de skills nêo o tocam. É o único lugar onde "instruçêo obrigatória" realmente significa obrigatório.
       </p>
 
       <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
@@ -308,9 +308,9 @@
       </div>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">🚨</span> Guardrail não é prompt "normal"</h3>
-        <p class="text-neutral-300 mb-3">Muitos times tentam implementar guardrail colando texto no prompt de uma skill. <strong>Não funciona.</strong> Na primeira compactação ele vira resumo genérico; na primeira conversa longa some; e nenhum deny-list de tool é aplicado de verdade.</p>
-        <p class="text-neutral-300">No DeerFlow, guardrails passam pelo subsistema certo: config no harness, injeção no node <code class="text-red-400">entry</code> e enforcement no middleware de tools. Commits recentes da ByteDance mexeram aqui justamente para blindar contra prompt injection em memórias carregadas por retriever.</p>
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">🚨</span> Guardrail nêo é prompt "normal"</h3>
+        <p class="text-neutral-300 mb-3">Muitos times tentam implementar guardrail colando texto no prompt de uma skill. <strong>Nêo funciona.</strong> Na primeira compactaçêo ele vira resumo genérico; na primeira conversa longa some; e nenhum deny-list de tool é aplicado de verdade.</p>
+        <p class="text-neutral-300">No DeerFlow, guardrails passam pelo subsistema certo: config no harness, injeçêo no node <code class="text-red-400">entry</code> e enforcement no middleware de tools. Commits recentes da ByteDance mexeram aqui justamente para blindar contra prompt injection em memórias carregadas por retriever.</p>
       </div>
     </section>
 
@@ -333,7 +333,7 @@
           <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">4.</span><div><strong class="text-white">Rodar uma query pesada</strong>: peça um deep-research cruzando duas fontes diferentes, algo como <em>"compare crescimento do PIB brasileiro e argentino nos últimos 10 anos, cite IBGE e INDEC, gere um gráfico"</em>. Isso garante ao menos 3 tool calls.</div></li>
           <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">5.</span><div><strong class="text-white">Abrir o trace</strong> em <code class="text-blue-400">smith.langchain.com</code> no projeto <code class="text-blue-400">deerflow-lab-2.1</code>. Você vê a árvore: <code class="text-blue-400">entry → plan → act(tool) → plan → act(tool) → ... → respond</code>.</div></li>
           <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">6.</span><div><strong class="text-white">Identificar o gargalo</strong>: ordene por <em>Latency</em>. Quase sempre um único node domina — geralmente uma tool de busca externa. Esse é o alvo a otimizar.</div></li>
-          <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">7.</span><div><strong class="text-white">Exportar o trace</strong> como JSON (botão <em>Export</em> no canto superior direito do run). Guarde — vai ser sua evidência quando abrir ticket interno ou issue no repositório do DeerFlow.</div></li>
+          <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">7.</span><div><strong class="text-white">Exportar o trace</strong> como JSON (botêo <em>Export</em> no canto superior direito do run). Guarde — vai ser sua evidência quando abrir ticket interno ou issue no repositório do DeerFlow.</div></li>
         </ol>
       </div>
 
@@ -363,11 +363,11 @@
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-blue-400 mt-1">✓</span>
-            <div><strong class="text-white">Context engine faz janela + compactação + summarization</strong><span class="text-neutral-400"> — quando o agente "esquece", o culpado costuma ser a compactação, não o modelo.</span></div>
+            <div><strong class="text-white">Context engine faz janela + compactaçêo + summarization</strong><span class="text-neutral-400"> — quando o agente "esquece", o culpado costuma ser a compactaçêo, nêo o modelo.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-blue-400 mt-1">✓</span>
-            <div><strong class="text-white">Guardrails vivem em slot protegido</strong><span class="text-neutral-400"> — prompt colado numa skill não é guardrail.</span></div>
+            <div><strong class="text-white">Guardrails vivem em slot protegido</strong><span class="text-neutral-400"> — prompt colado numa skill nêo é guardrail.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-blue-400 mt-1">✓</span>
@@ -377,7 +377,7 @@
 
         <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
           <h3 class="font-semibold text-blue-400 mb-2">Próximo Módulo:</h3>
-          <p class="text-neutral-300">2.2 — ⚙️ Middleware e execução</p>
+          <p class="text-neutral-300">2.2 — ⚙️ Middleware e execuçêo</p>
           <p class="text-neutral-400 text-sm mt-1">Como o DeerFlow intercepta, transforma e recupera tool calls. Inclui lab hands-on de middleware em Python.</p>
         </div>
 

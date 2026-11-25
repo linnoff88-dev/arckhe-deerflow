@@ -106,7 +106,7 @@
       <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÓDULO 2.3</span>
       <h1 class="text-3xl sm:text-4xl font-bold mb-4">🎨 Criando a sua primeira skill</h1>
       <p class="text-lg text-neutral-400 max-w-3xl">
-        Do arquivo vazio à skill acionada automaticamente pelo lead_agent. Por que a descrição é mais importante que as instruções, como testar trigger accuracy, e a receita para cruzar IBGE com Portal da Transparência.
+        Do arquivo vazio à skill acionada automaticamente pelo lead_agent. Por que a descriçêo é mais importante que as instruções, como testar trigger accuracy, e a receita para cruzar IBGE com Portal da Transparência.
       </p>
       <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
         <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">5</div><div class="text-xs text-neutral-400">Tópicos</div></div>
@@ -120,8 +120,8 @@
   <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
     <div class="mb-12 bg-primary/10 rounded-xl border border-primary/30 p-6">
-      <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> O ponto de extensão mais importante do DeerFlow</h3>
-      <p class="text-neutral-300">Na Trilha 1 você aprendeu que skill é um dos pilares. Aqui você constrói uma. Skill mal-feita é invisível para o modelo (nunca é acionada) e skill bem-feita vira parte permanente do catálogo da sua organização. A diferença está quase toda na <strong class="text-primary">descrição</strong>.</p>
+      <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> O ponto de extensêo mais importante do DeerFlow</h3>
+      <p class="text-neutral-300">Na Trilha 1 você aprendeu que skill é um dos pilares. Aqui você constrói uma. Skill mal-feita é invisível para o modelo (nunca é acionada) e skill bem-feita vira parte permanente do catálogo da sua organizaçêo. A diferença está quase toda na <strong class="text-primary">descriçêo</strong>.</p>
     </div>
 
     <!-- TOPICO 1 -->
@@ -136,12 +136,12 @@
 
       <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🎯</span> Conceito Central</h3>
-        <p class="text-neutral-300 mb-4">O frontmatter tem três campos obrigatórios: <code class="text-blue-400">name</code>, <code class="text-blue-400">description</code> e <code class="text-blue-400">version</code>. O resto do arquivo é a instrução que o modelo lê quando a skill é acionada. Nada mais. Se está ficando complexo, você provavelmente está tentando meter duas skills no mesmo arquivo.</p>
+        <p class="text-neutral-300 mb-4">O frontmatter tem três campos obrigatórios: <code class="text-blue-400">name</code>, <code class="text-blue-400">description</code> e <code class="text-blue-400">version</code>. O resto do arquivo é a instruçêo que o modelo lê quando a skill é acionada. Nada mais. Se está ficando complexo, você provavelmente está tentando meter duas skills no mesmo arquivo.</p>
         <ul class="space-y-2 text-neutral-300 text-sm">
           <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>name</strong> — kebab-case, único no registry (<code class="text-blue-400">brazilian-gov-research</code>).</span></li>
           <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>description</strong> — 1-3 frases densas com gatilhos explícitos. É o que o modelo lê para decidir se aciona.</span></li>
           <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Corpo</strong> — instruções passo-a-passo do que fazer quando a skill é acionada. Bullet points, imperativo.</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>tools/</strong> — funções Python com decorator <code class="text-blue-400">@tool</code>. Opcional, só se a skill precisa de algo que não existe no harness.</span></li>
+          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>tools/</strong> — funções Python com decorator <code class="text-blue-400">@tool</code>. Opcional, só se a skill precisa de algo que nêo existe no harness.</span></li>
         </ul>
       </div>
 
@@ -149,7 +149,7 @@
         <h3 class="text-lg font-semibold text-cyan-400 mb-4 flex items-center"><span class="mr-2">📊</span> Números de uma skill saudável</h3>
         <ul class="space-y-2 text-neutral-300 text-sm">
           <li><strong>SKILL.md</strong> — 40-150 linhas. Acima disso, considere quebrar em duas.</li>
-          <li><strong>Descrição</strong> — 40-80 palavras. Abaixo falta sinal; acima dilui.</li>
+          <li><strong>Descriçêo</strong> — 40-80 palavras. Abaixo falta sinal; acima dilui.</li>
           <li><strong>Tools por skill</strong> — 0 a 5. Mais que isso é geralmente um custom agent disfarçado.</li>
           <li><strong>Tempo total por turno</strong> — orçamento de 2-3s + tempo de IO das tools chamadas.</li>
           <li><strong>Tokens injetados no prompt</strong> — corpo inteiro, quando acionada. Manter enxuto é economia real.</li>
@@ -186,28 +186,28 @@
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">3</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Revisar o draft gerado</h4>
-            <p class="text-neutral-300 text-sm">A skill-creator escreve o SKILL.md e mostra o diff. Você revisa, ajusta a descrição (sempre a descrição), e aprova. Nunca aprove sem ler.</p>
+            <p class="text-neutral-300 text-sm">A skill-creator escreve o SKILL.md e mostra o diff. Você revisa, ajusta a descriçêo (sempre a descriçêo), e aprova. Nunca aprove sem ler.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">4</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Rodar os prompts de teste</h4>
-            <p class="text-neutral-300 text-sm">Ela gera 5 prompts: 2 que deveriam acionar a skill, 2 que não deveriam, 1 ambíguo. Se os dois positivos acionam e os dois negativos não, a descrição passou no smoke test.</p>
+            <p class="text-neutral-300 text-sm">Ela gera 5 prompts: 2 que deveriam acionar a skill, 2 que nêo deveriam, 1 ambíguo. Se os dois positivos acionam e os dois negativos nêo, a descriçêo passou no smoke test.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">5</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">Commit e revisão humana</h4>
-            <p class="text-neutral-300 text-sm">Skill vai para o git como qualquer código. PR com diff de SKILL.md + evals. Reviewer lê a descrição primeiro, o corpo depois — a mesma ordem que o lead_agent usa.</p>
+            <h4 class="font-semibold text-white mb-2">Commit e revisêo humana</h4>
+            <p class="text-neutral-300 text-sm">Skill vai para o git como qualquer código. PR com diff de SKILL.md + evals. Reviewer lê a descriçêo primeiro, o corpo depois — a mesma ordem que o lead_agent usa.</p>
           </div>
         </div>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Quando não usar o skill-creator</h3>
-        <p class="text-neutral-300">Se você já tem uma skill parecida no catálogo, é mais rápido copiar e adaptar. O skill-creator é ótimo para primeira modelagem; não é mágico na iteração — a partir do draft inicial você edita direto.</p>
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Quando nêo usar o skill-creator</h3>
+        <p class="text-neutral-300">Se você já tem uma skill parecida no catálogo, é mais rápido copiar e adaptar. O skill-creator é ótimo para primeira modelagem; nêo é mágico na iteraçêo — a partir do draft inicial você edita direto.</p>
       </div>
     </section>
 
@@ -215,38 +215,38 @@
     <section id="topico-3" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">🎯 Trigger accuracy: a arte da descrição</h2>
+        <h2 class="text-2xl font-bold">🎯 Trigger accuracy: a arte da descriçêo</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        A pior coisa que acontece com uma skill é nunca ser acionada. A segunda pior é ser acionada quando não devia. As duas são problema de <strong class="text-blue-400">descrição</strong>, não de conteúdo. O modelo não lê o corpo da skill quando decide; ele lê a descrição. Então é nela que você investe.
+        A pior coisa que acontece com uma skill é nunca ser acionada. A segunda pior é ser acionada quando nêo devia. As duas sêo problema de <strong class="text-blue-400">descriçêo</strong>, nêo de conteúdo. O modelo nêo lê o corpo da skill quando decide; ele lê a descriçêo. Entêo é nela que você investe.
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-          <h4 class="font-bold text-blue-400 mb-4">✓ Fazer na descrição</h4>
+          <h4 class="font-bold text-blue-400 mb-4">✓ Fazer na descriçêo</h4>
           <ul class="space-y-3 text-neutral-300 text-sm">
             <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Frases com gatilhos literais: "quando o usuário pedir dados de X".</span></li>
             <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Usar 3-5 sinônimos-chave para aumentar recall.</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Explicitar o escopo <em>positivo</em> ("serve para") e <em>negativo</em> ("não serve para").</span></li>
+            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Explicitar o escopo <em>positivo</em> ("serve para") e <em>negativo</em> ("nêo serve para").</span></li>
             <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Exemplos concretos: "ex: IBGE, INEP, DataSUS, Portal da Transparência".</span></li>
             <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Manter sob ~80 palavras — mais que isso o modelo começa a diluir.</span></li>
           </ul>
         </div>
         <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-4">✗ Evitar na descrição</h4>
+          <h4 class="font-bold text-red-400 mb-4">✗ Evitar na descriçêo</h4>
           <ul class="space-y-3 text-neutral-300 text-sm">
             <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Vaguidades: "ajuda com dados" (que dados?).</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Repetir o nome da skill no corpo — não adiciona sinal.</span></li>
+            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Repetir o nome da skill no corpo — nêo adiciona sinal.</span></li>
             <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Frases de marketing ("a melhor forma de..."). Modelo ignora.</span></li>
             <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Cobrir dez casos de uso — vira recall baixo para todos.</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Depender de contexto que o modelo não tem ("usa a base da empresa").</span></li>
+            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Depender de contexto que o modelo nêo tem ("usa a base da empresa").</span></li>
           </ul>
         </div>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Teste de qualidade em 30 segundos</h3>
-        <p class="text-neutral-300">Leia a descrição em voz alta e se pergunte: "Se eu fosse o lead_agent lendo 50 descrições, essa teria chance de vencer as outras para o meu caso?". Se a resposta for "sei lá", reescreva. Descrição campeã é a que tem <em>gatilhos explícitos e escopo negativo</em>.</p>
+        <p class="text-neutral-300">Leia a descriçêo em voz alta e se pergunte: "Se eu fosse o lead_agent lendo 50 descrições, essa teria chance de vencer as outras para o meu caso?". Se a resposta for "sei lá", reescreva. Descriçêo campeê é a que tem <em>gatilhos explícitos e escopo negativo</em>.</p>
       </div>
     </section>
 
@@ -254,32 +254,32 @@
     <section id="topico-4" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">✅ Testes e validação</h2>
+        <h2 class="text-2xl font-bold">✅ Testes e validaçêo</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Skill é código. Código tem teste. A diferença é que o "teste" aqui tem duas camadas: <strong class="text-blue-400">trigger eval</strong> (a skill é acionada quando deveria?) e <strong class="text-blue-400">output eval</strong> (quando acionada, o resultado está certo?). Ignorar qualquer uma produz skill que parece funcionar em demo e não em produção.
+        Skill é código. Código tem teste. A diferença é que o "teste" aqui tem duas camadas: <strong class="text-blue-400">trigger eval</strong> (a skill é acionada quando deveria?) e <strong class="text-blue-400">output eval</strong> (quando acionada, o resultado está certo?). Ignorar qualquer uma produz skill que parece funcionar em demo e nêo em produçêo.
       </p>
 
       <div class="bg-cyan-900/20 rounded-xl border border-cyan-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-cyan-400 mb-4 flex items-center"><span class="mr-2">📊</span> Estrutura de um eval mínimo</h3>
         <ul class="space-y-2 text-neutral-300 text-sm">
           <li><strong>Trigger positive</strong> — 10 prompts que devem acionar. Meta: recall ≥ 90%.</li>
-          <li><strong>Trigger negative</strong> — 10 prompts ambíguos que não devem acionar. Meta: precision ≥ 90%.</li>
-          <li><strong>Output golden</strong> — 5 prompts positivos com output esperado escrito à mão. Roda em cada PR.</li>
-          <li><strong>Regression set</strong> — bugs já corrigidos viram tests para não voltarem.</li>
+          <li><strong>Trigger negative</strong> — 10 prompts ambíguos que nêo devem acionar. Meta: precision ≥ 90%.</li>
+          <li><strong>Output golden</strong> — 5 prompts positivos com output esperado escrito à mêo. Roda em cada PR.</li>
+          <li><strong>Regression set</strong> — bugs já corrigidos viram tests para nêo voltarem.</li>
           <li><strong>Latência-orçamento</strong> — máximo aceitável de tempo/tokens para skill concluir.</li>
         </ul>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica: eval não precisa ser pipeline fancy</h3>
-        <p class="text-neutral-300">Um script Python que roda 20 prompts contra o DeerFlow local e compara contra um JSON de expected já é 80% do valor. Ferramenta robusta vem quando a skill estiver em produção — antes é overengineering.</p>
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica: eval nêo precisa ser pipeline fancy</h3>
+        <p class="text-neutral-300">Um script Python que roda 20 prompts contra o DeerFlow local e compara contra um JSON de expected já é 80% do valor. Ferramenta robusta vem quando a skill estiver em produçêo — antes é overengineering.</p>
       </div>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Armadilha comum: "funcionou comigo"</h3>
-        <p class="text-neutral-300 mb-3">A skill foi acionada numa demo e parece perfeita. Você não criou eval. Duas semanas depois, um colega diz que "a skill parou de funcionar" — na verdade nunca foi consistente, e sem baseline você não tem como provar nem o contrário.</p>
-        <p class="text-neutral-300"><strong>Tratamento</strong>: no commit inicial da skill, um <code class="text-red-400">evals/&lt;skill-name&gt;.py</code> com ao menos 10 casos. CI roda a cada PR. Passou a ser padrão de PR, não favor.</p>
+        <p class="text-neutral-300 mb-3">A skill foi acionada numa demo e parece perfeita. Você nêo criou eval. Duas semanas depois, um colega diz que "a skill parou de funcionar" — na verdade nunca foi consistente, e sem baseline você nêo tem como provar nem o contrário.</p>
+        <p class="text-neutral-300"><strong>Tratamento</strong>: no commit inicial da skill, um <code class="text-red-400">evals/&lt;skill-name&gt;.py</code> com ao menos 10 casos. CI roda a cada PR. Passou a ser padrêo de PR, nêo favor.</p>
       </div>
     </section>
 
@@ -290,25 +290,25 @@
         <h2 class="text-2xl font-bold">🧪 Lab: skill brazilian-gov-research</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Construir uma skill real: cruzar dados do <strong class="text-blue-400">IBGE</strong> (indicadores socioeconômicos) com o <strong class="text-blue-400">Portal da Transparência</strong> (execução orçamentária). Quando o usuário pedir comparações do tipo "quanto o município X gastou em saúde versus sua população", a skill entra em ação.
+        Construir uma skill real: cruzar dados do <strong class="text-blue-400">IBGE</strong> (indicadores socioeconômicos) com o <strong class="text-blue-400">Portal da Transparência</strong> (execuçêo orçamentária). Quando o usuário pedir comparações do tipo "quanto o município X gastou em saúde versus sua populaçêo", a skill entra em açêo.
       </p>
 
       <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
         <h3 class="text-lg font-semibold text-white mb-4">Passos do lab</h3>
         <ol class="space-y-4 text-neutral-300">
           <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">1.</span><div><strong class="text-white">Criar diretório</strong>: <code class="text-blue-400">deerflow/app/skills/brazilian-gov-research/</code>. Dentro dele, um <code class="text-blue-400">SKILL.md</code>, um <code class="text-blue-400">tools/__init__.py</code> e um <code class="text-blue-400">references/endpoints.md</code>.</div></li>
-          <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">2.</span><div><strong class="text-white">Escrever frontmatter + descrição</strong>:
+          <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">2.</span><div><strong class="text-white">Escrever frontmatter + descriçêo</strong>:
             <pre class="bg-dark-900 rounded-lg p-4 mt-2 text-xs text-blue-400 overflow-x-auto"><code>---
 name: brazilian-gov-research
 version: 0.1.0
 description: |
-  Cruza dados do IBGE (população, PIB, IDH, educação,
-  saúde) com o Portal da Transparência federal (execução
+  Cruza dados do IBGE (populaçêo, PIB, IDH, educaçêo,
+  saúde) com o Portal da Transparência federal (execuçêo
   orçamentária, contratos, convênios). Aciona quando o
   usuário pedir comparações município/estado envolvendo
   indicadores sociais e gastos públicos brasileiros.
   Ex: "gasto per capita em saúde no RS", "cruzar IDH
-  com investimento em educação em 2024". NÃO serve
+  com investimento em educaçêo em 2024". NêO serve
   para dados internacionais ou privados.
 ---</code></pre>
           </div></li>
@@ -316,7 +316,7 @@ description: |
           <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">4.</span><div><strong class="text-white">Criar duas tools Python</strong>: <code class="text-blue-400">fetch_ibge(indicator, locality)</code> e <code class="text-blue-400">fetch_transparencia(year, municipio, area)</code>. Ambas com decorator <code class="text-blue-400">@tool</code>, docstring clara (vira schema) e tratamento de 404.</div></li>
           <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">5.</span><div><strong class="text-white">Registrar a skill</strong>: recarregar DeerFlow (<code class="text-blue-400">docker compose restart</code>). No log de boot, confirme <em>"skill loaded: brazilian-gov-research"</em>.</div></li>
           <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">6.</span><div><strong class="text-white">Testar trigger</strong>: 4 prompts positivos ("gasto per capita em saúde de Florianópolis em 2024") e 4 negativos ("gasto público em Portugal"). Verifique no LangSmith qual skill foi acionada em cada um.</div></li>
-          <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">7.</span><div><strong class="text-white">Iterar descrição</strong>: se algum positivo não acionou, a descrição está faltando um gatilho. Se um negativo acionou, está faltando escopo negativo. Repita.</div></li>
+          <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">7.</span><div><strong class="text-white">Iterar descriçêo</strong>: se algum positivo nêo acionou, a descriçêo está faltando um gatilho. Se um negativo acionou, está faltando escopo negativo. Repita.</div></li>
         </ol>
       </div>
 
@@ -338,19 +338,19 @@ description: |
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-blue-400 mt-1">✓</span>
-            <div><strong class="text-white">skill-creator é o atalho</strong><span class="text-neutral-400"> — use para o primeiro draft e depois edite à mão.</span></div>
+            <div><strong class="text-white">skill-creator é o atalho</strong><span class="text-neutral-400"> — use para o primeiro draft e depois edite à mêo.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-blue-400 mt-1">✓</span>
-            <div><strong class="text-white">Descrição é 80% do trabalho</strong><span class="text-neutral-400"> — gatilhos explícitos, sinônimos, escopo positivo e negativo.</span></div>
+            <div><strong class="text-white">Descriçêo é 80% do trabalho</strong><span class="text-neutral-400"> — gatilhos explícitos, sinônimos, escopo positivo e negativo.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-blue-400 mt-1">✓</span>
-            <div><strong class="text-white">Eval tem duas camadas</strong><span class="text-neutral-400"> — trigger (acionou?) e output (acertou?). Sem isso, demo boa e produção ruim.</span></div>
+            <div><strong class="text-white">Eval tem duas camadas</strong><span class="text-neutral-400"> — trigger (acionou?) e output (acertou?). Sem isso, demo boa e produçêo ruim.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-blue-400 mt-1">✓</span>
-            <div><strong class="text-white">Uma skill, uma responsabilidade</strong><span class="text-neutral-400"> — composição cobre os casos híbridos.</span></div>
+            <div><strong class="text-white">Uma skill, uma responsabilidade</strong><span class="text-neutral-400"> — composiçêo cobre os casos híbridos.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-blue-400 mt-1">✓</span>
@@ -358,7 +358,7 @@ description: |
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-blue-400 mt-1">✓</span>
-            <div><strong class="text-white">Eval vai no commit inicial</strong><span class="text-neutral-400"> — sem baseline, "parou de funcionar" vira discussão sem dados.</span></div>
+            <div><strong class="text-white">Eval vai no commit inicial</strong><span class="text-neutral-400"> — sem baseline, "parou de funcionar" vira discussêo sem dados.</span></div>
           </div>
         </div>
 

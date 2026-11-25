@@ -112,7 +112,7 @@
       <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MÓDULO 1.5</span>
       <h1 class="text-3xl sm:text-4xl font-bold mb-4">🔎 Web search, arquivos e sandbox</h1>
       <p class="text-lg text-neutral-400 max-w-3xl">
-        A infra que sustenta qualquer skill não trivial. Providers de search, ciclo de vida de arquivos dentro da sessão e os três modos de sandbox — Local, Docker, Kubernetes — com os trade-offs que importam.
+        A infra que sustenta qualquer skill nêo trivial. Providers de search, ciclo de vida de arquivos dentro da sessêo e os três modos de sandbox — Local, Docker, Kubernetes — com os trade-offs que importam.
       </p>
       <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
         <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
@@ -128,7 +128,7 @@
     <!-- Intro -->
     <div class="mb-12 bg-primary/10 rounded-xl border border-primary/30 p-6">
       <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Como ler este módulo</h3>
-      <p class="text-neutral-300">A escolha de sandbox é <strong class="text-primary">uma decisão de risco, não de performance</strong>. Os tópicos 3-5 são curtos de propósito — o objetivo é você entender quando <em>não</em> usar cada um. Depois o lab costura web search + upload + sandbox numa tarefa real.</p>
+      <p class="text-neutral-300">A escolha de sandbox é <strong class="text-primary">uma decisêo de risco, nêo de performance</strong>. Os tópicos 3-5 sêo curtos de propósito — o objetivo é você entender quando <em>nêo</em> usar cada um. Depois o lab costura web search + upload + sandbox numa tarefa real.</p>
     </div>
 
     <!-- TOPICO 1 -->
@@ -138,7 +138,7 @@
         <h2 class="text-2xl font-bold">🌐 Providers de web search</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Skills de pesquisa (deep-research, SLR, github-deep-research) não falam direto com Google ou Bing — passam por um <strong class="text-emerald-400">provider de search</strong> que devolve resultados estruturados, já rankeados e prontos para consumo por LLM. O DeerFlow suporta Tavily e InfoQuest de fábrica, e a escolha não é neutra: provider errado derruba a qualidade mesmo com a skill certa.
+        Skills de pesquisa (deep-research, SLR, github-deep-research) nêo falam direto com Google ou Bing — passam por um <strong class="text-emerald-400">provider de search</strong> que devolve resultados estruturados, já rankeados e prontos para consumo por LLM. O DeerFlow suporta Tavily e InfoQuest de fábrica, e a escolha nêo é neutra: provider errado derruba a qualidade mesmo com a skill certa.
       </p>
 
       <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
@@ -155,14 +155,14 @@
           <li><strong>Custo por query</strong> — Tavily ~5-10× mais barato que InfoQuest</li>
           <li><strong>Latência</strong> — Tavily: ~1-2s, InfoQuest: ~3-5s</li>
           <li><strong>Qualidade em nicho</strong> — InfoQuest vence, principalmente em fontes acadêmicas/regulatórias</li>
-          <li><strong>Freshness</strong> — Tavily atualiza mais rápido; InfoQuest tem indexação mais curada</li>
+          <li><strong>Freshness</strong> — Tavily atualiza mais rápido; InfoQuest tem indexaçêo mais curada</li>
           <li><strong>Cota</strong> — ambos têm limite, configure <code class="text-blue-400">max_queries_per_turn</code> no YAML</li>
         </ul>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
-        <p class="text-neutral-300">Comece com <strong class="text-primary">Tavily + free tier</strong>. Só migre para InfoQuest quando você notar que deep-research está citando blogs de qualidade duvidosa em um tema que deveria ter fontes acadêmicas. A migração é trocar duas linhas no config.yaml.</p>
+        <p class="text-neutral-300">Comece com <strong class="text-primary">Tavily + free tier</strong>. Só migre para InfoQuest quando você notar que deep-research está citando blogs de qualidade duvidosa em um tema que deveria ter fontes acadêmicas. A migraçêo é trocar duas linhas no config.yaml.</p>
       </div>
     </section>
 
@@ -173,15 +173,15 @@
         <h2 class="text-2xl font-bold">📁 Upload de arquivos</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Upload no DeerFlow não é "enviar um PDF para o contexto do modelo". É <strong class="text-emerald-400">colocar o arquivo no sandbox</strong> — o mesmo sistema de arquivos onde as skills executam código. Isso muda tudo: data-analysis pode abrir o CSV com pandas, code-documentation pode listar o diretório, chart-visualization pode salvar PNG no mesmo lugar. O modelo nunca vê o arquivo inteiro; vê o código que o manipula e o resultado do código.
+        Upload no DeerFlow nêo é "enviar um PDF para o contexto do modelo". É <strong class="text-emerald-400">colocar o arquivo no sandbox</strong> — o mesmo sistema de arquivos onde as skills executam código. Isso muda tudo: data-analysis pode abrir o CSV com pandas, code-documentation pode listar o diretório, chart-visualization pode salvar PNG no mesmo lugar. O modelo nunca vê o arquivo inteiro; vê o código que o manipula e o resultado do código.
       </p>
 
       <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center"><span class="mr-2">🎯</span> Ciclo de vida do arquivo</h3>
         <ul class="space-y-2 text-neutral-300 text-sm">
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Upload via UI</strong> → arquivo vai para o diretório de trabalho do sandbox daquela sessão</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Upload via UI</strong> → arquivo vai para o diretório de trabalho do sandbox daquela sessêo</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Referência por nome</strong> — skills acessam pelo nome do arquivo diretamente no prompt</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Vida útil</strong> — enquanto a sessão existir, o arquivo persiste. Sessão encerrada = sandbox limpo</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Vida útil</strong> — enquanto a sessêo existir, o arquivo persiste. Sessêo encerrada = sandbox limpo</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Artefatos gerados</strong> — gráficos, PPTs, relatórios criados pelas skills também viram download na UI</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Limite</strong> — tamanho de upload configurável, default conservador (~50MB por arquivo)</span></li>
         </ul>
@@ -189,8 +189,8 @@
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">🚨</span> Alerta: vazamento entre sessões</h3>
-        <p class="text-neutral-300 mb-3">No sandbox <strong>Local</strong>, o diretório de trabalho pode ser compartilhado entre sessões se você não configurar isolamento. Isso significa que um arquivo que você subiu numa sessão "pesquisa A" pode ficar visível numa sessão "pesquisa B" — e pior, pode ser lido acidentalmente por uma skill.</p>
-        <p class="text-neutral-300"><strong>Fix:</strong> use Docker ou K8s (já isolam por sessão), ou configure <code class="text-red-400">sandbox.workdir_per_session: true</code> se precisar ficar no Local.</p>
+        <p class="text-neutral-300 mb-3">No sandbox <strong>Local</strong>, o diretório de trabalho pode ser compartilhado entre sessões se você nêo configurar isolamento. Isso significa que um arquivo que você subiu numa sessêo "pesquisa A" pode ficar visível numa sessêo "pesquisa B" — e pior, pode ser lido acidentalmente por uma skill.</p>
+        <p class="text-neutral-300"><strong>Fix:</strong> use Docker ou K8s (já isolam por sessêo), ou configure <code class="text-red-400">sandbox.workdir_per_session: true</code> se precisar ficar no Local.</p>
       </div>
     </section>
 
@@ -201,12 +201,12 @@
         <h2 class="text-2xl font-bold">💻 Sandbox Local</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        O modo mais simples e mais perigoso. Sandbox Local roda o código gerado <strong class="text-emerald-400">no próprio host</strong>, sob o usuário que iniciou o DeerFlow, sem nenhuma camada de isolamento. Zero overhead. Zero proteção. É útil em <em>uma</em> situação: máquina de desenvolvimento dedicada, sem credenciais importantes, sem rede crítica.
+        O modo mais simples e mais perigoso. Sandbox Local roda o código gerado <strong class="text-emerald-400">no próprio host</strong>, sob o usuário que iniciou o DeerFlow, sem nenhuma camada de isolamento. Zero overhead. Zero proteçêo. É útil em <em>uma</em> situaçêo: máquina de desenvolvimento dedicada, sem credenciais importantes, sem rede crítica.
       </p>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">🚨</span> Alerta vermelho</h3>
-        <p class="text-neutral-300 mb-3">Rodar Local na sua máquina de trabalho significa que <strong>qualquer código gerado pelo LLM</strong> tem acesso ao seu home directory, às suas SSH keys, aos seus tokens de cloud, ao seu banco do navegador. Não importa quão benigno seja o prompt — prompt injection é real, alucinação é real, erro do modelo é real.</p>
+        <p class="text-neutral-300 mb-3">Rodar Local na sua máquina de trabalho significa que <strong>qualquer código gerado pelo LLM</strong> tem acesso ao seu home directory, às suas SSH keys, aos seus tokens de cloud, ao seu banco do navegador. Nêo importa quêo benigno seja o prompt — prompt injection é real, alucinaçêo é real, erro do modelo é real.</p>
         <p class="text-neutral-300"><strong>Casos aceitáveis de Local:</strong> máquina descartável de dev, CI sem secrets, laptop usado apenas para demos.</p>
       </div>
 
@@ -228,23 +228,23 @@
         <h2 class="text-2xl font-bold">🐳 Sandbox Docker</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        O <strong class="text-emerald-400">default recomendado</strong> para uso pessoal e equipes pequenas. Cada execução de código vive num container descartável baseado na imagem oficial do DeerFlow sandbox, com filesystem isolado, rede controlada e tempo de vida definido. Resolve 90% dos problemas de Local sem complexidade operacional.
+        O <strong class="text-emerald-400">default recomendado</strong> para uso pessoal e equipes pequenas. Cada execuçêo de código vive num container descartável baseado na imagem oficial do DeerFlow sandbox, com filesystem isolado, rede controlada e tempo de vida definido. Resolve 90% dos problemas de Local sem complexidade operacional.
       </p>
 
       <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center"><span class="mr-2">🎯</span> Por que Docker é o default</h3>
-        <p class="text-neutral-300 mb-4">Porque é o <strong>menor overhead aceitável</strong> para rodar código de terceiros — e o código gerado por LLM é, em todo sentido prático, código de terceiros. O container pode ser reciclado a cada sessão, os mounts são explícitos, a rede pode ser restrita, e nada disso exige kubernetes.</p>
+        <p class="text-neutral-300 mb-4">Porque é o <strong>menor overhead aceitável</strong> para rodar código de terceiros — e o código gerado por LLM é, em todo sentido prático, código de terceiros. O container pode ser reciclado a cada sessêo, os mounts sêo explícitos, a rede pode ser restrita, e nada disso exige kubernetes.</p>
         <ul class="space-y-2 text-neutral-300 text-sm">
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Imagem base</strong> — python + uv + bibliotecas comuns, mantida pelo DeerFlow</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Mounts explícitos</strong> — só o workdir da sessão, nada do host além disso</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Tempo de vida</strong> — container dura enquanto a sessão existe, é reciclado no reset</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Mounts explícitos</strong> — só o workdir da sessêo, nada do host além disso</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Tempo de vida</strong> — container dura enquanto a sessêo existe, é reciclado no reset</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>Rede</strong> — configurável. Por default permite saída para APIs; pode ser restringida.</span></li>
         </ul>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Imagem custom</h3>
-        <p class="text-neutral-300">Se seu fluxo precisa de uma biblioteca específica toda hora (exemplo: polars, scikit-learn completo, uma lib interna), é mais rápido <strong class="text-primary">estender a imagem base</strong> do que mandar o agente instalar dinamicamente a cada execução. Um Dockerfile de 5 linhas + <code class="text-primary">sandbox.image: myorg/deerflow-sandbox:custom</code> no YAML.</p>
+        <p class="text-neutral-300">Se seu fluxo precisa de uma biblioteca específica toda hora (exemplo: polars, scikit-learn completo, uma lib interna), é mais rápido <strong class="text-primary">estender a imagem base</strong> do que mandar o agente instalar dinamicamente a cada execuçêo. Um Dockerfile de 5 linhas + <code class="text-primary">sandbox.image: myorg/deerflow-sandbox:custom</code> no YAML.</p>
       </div>
     </section>
 
@@ -255,7 +255,7 @@
         <h2 class="text-2xl font-bold">☸️ Sandbox Kubernetes</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Para <strong class="text-emerald-400">multi-tenant em produção</strong>, Docker não escala. Você precisa de quotas por sessão, isolamento de rede real, limpeza garantida, observabilidade integrada. Kubernetes vira a única resposta sensata. Cada sessão do DeerFlow instancia um Pod com ServiceAccount próprio, NetworkPolicy, limites de CPU/RAM/tempo e teardown automático.
+        Para <strong class="text-emerald-400">multi-tenant em produçêo</strong>, Docker nêo escala. Você precisa de quotas por sessêo, isolamento de rede real, limpeza garantida, observabilidade integrada. Kubernetes vira a única resposta sensata. Cada sessêo do DeerFlow instancia um Pod com ServiceAccount próprio, NetworkPolicy, limites de CPU/RAM/tempo e teardown automático.
       </p>
 
       <div class="space-y-6 mb-6">
@@ -269,7 +269,7 @@
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">2</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">Definir quotas padrão</h4>
+            <h4 class="font-semibold text-white mb-2">Definir quotas padrêo</h4>
             <p class="text-neutral-300 text-sm">CPU request/limit, memória, ephemeral-storage, tempo máximo de vida. Valores sensatos: 500m-2 CPU, 1-4 GiB RAM, 30min de timeout. Ajuste pelo seu workload.</p>
           </div>
         </div>
@@ -302,12 +302,12 @@
 
       <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center"><span class="mr-2">🎯</span> O que você vai fazer</h3>
-        <p class="text-neutral-300">Subir um CSV real de tamanho moderado, pedir análise exploratória com visualizações, baixar os artefatos gerados e conferir no trace que a composição de skills aconteceu.</p>
+        <p class="text-neutral-300">Subir um CSV real de tamanho moderado, pedir análise exploratória com visualizações, baixar os artefatos gerados e conferir no trace que a composiçêo de skills aconteceu.</p>
       </div>
 
       <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">📊</span> Por que esse lab</h3>
-        <p class="text-neutral-300">Ele toca três coisas em uma tarefa: <strong>upload</strong> (fluxo de arquivo), <strong>sandbox</strong> (execução de pandas/matplotlib real), e <strong>composição automática</strong> (data-analysis chama chart-visualization sem você pedir). Você vê que o harness faz mais do que rotear prompt.</p>
+        <p class="text-neutral-300">Ele toca três coisas em uma tarefa: <strong>upload</strong> (fluxo de arquivo), <strong>sandbox</strong> (execuçêo de pandas/matplotlib real), e <strong>composiçêo automática</strong> (data-analysis chama chart-visualization sem você pedir). Você vê que o harness faz mais do que rotear prompt.</p>
       </div>
 
       <div class="space-y-6 mb-6">
@@ -322,7 +322,7 @@
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">2</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Upload + prompt</h4>
-            <p class="text-neutral-300 text-sm">Suba pelo botão de upload da UI. Prompt sugerido: <em>"Faça uma análise exploratória deste CSV, destaque 3 padrões interessantes e gere visualizações correspondentes."</em> Deixe a auto-seleção de skill rodar.</p>
+            <p class="text-neutral-300 text-sm">Suba pelo botêo de upload da UI. Prompt sugerido: <em>"Faça uma análise exploratória deste CSV, destaque 3 padrões interessantes e gere visualizações correspondentes."</em> Deixe a auto-seleçêo de skill rodar.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -336,13 +336,13 @@
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">4</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Baixar os artefatos</h4>
-            <p class="text-neutral-300 text-sm">A UI lista os arquivos gerados no sandbox. Baixe os PNGs, confira que são gráficos de verdade (não descrições textuais), compare com o texto da análise. Se não bate, o prompt precisa ser mais específico.</p>
+            <p class="text-neutral-300 text-sm">A UI lista os arquivos gerados no sandbox. Baixe os PNGs, confira que sêo gráficos de verdade (nêo descrições textuais), compare com o texto da análise. Se nêo bate, o prompt precisa ser mais específico.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">5</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">Variação: forçar o sandbox</h4>
+            <h4 class="font-semibold text-white mb-2">Variaçêo: forçar o sandbox</h4>
             <p class="text-neutral-300 text-sm">Se você estiver em Local, troque para Docker temporariamente e refaça. Sinta na pele o que muda (latência, isolamento, onde o PNG mora). O trade-off fica concreto.</p>
           </div>
         </div>
@@ -361,23 +361,23 @@
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-emerald-400 mt-1">✓</span>
-            <div><strong class="text-white">Upload é inserção no sandbox</strong><span class="text-neutral-400"> — não é contexto do modelo. Skills manipulam o arquivo via código, modelo vê apenas o código e os resultados.</span></div>
+            <div><strong class="text-white">Upload é inserçêo no sandbox</strong><span class="text-neutral-400"> — nêo é contexto do modelo. Skills manipulam o arquivo via código, modelo vê apenas o código e os resultados.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-emerald-400 mt-1">✓</span>
-            <div><strong class="text-white">Sandbox Local = risco, não performance</strong><span class="text-neutral-400"> — só em máquina descartável. Prompt injection, alucinação e erro do modelo são reais.</span></div>
+            <div><strong class="text-white">Sandbox Local = risco, nêo performance</strong><span class="text-neutral-400"> — só em máquina descartável. Prompt injection, alucinaçêo e erro do modelo sêo reais.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-emerald-400 mt-1">✓</span>
-            <div><strong class="text-white">Docker é o default razoável</strong><span class="text-neutral-400"> — container por sessão, imagem custom quando precisa, mounts explícitos, rede configurável.</span></div>
+            <div><strong class="text-white">Docker é o default razoável</strong><span class="text-neutral-400"> — container por sessêo, imagem custom quando precisa, mounts explícitos, rede configurável.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-emerald-400 mt-1">✓</span>
-            <div><strong class="text-white">Kubernetes para multi-tenant</strong><span class="text-neutral-400"> — Pod por sessão, quotas, NetworkPolicy e observability integrada. Único caminho sensato em produção.</span></div>
+            <div><strong class="text-white">Kubernetes para multi-tenant</strong><span class="text-neutral-400"> — Pod por sessêo, quotas, NetworkPolicy e observability integrada. Único caminho sensato em produçêo.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-emerald-400 mt-1">✓</span>
-            <div><strong class="text-white">Composição automática é real</strong><span class="text-neutral-400"> — data-analysis → chart-visualization acontece sem orquestração explícita. É o shape certo do DeerFlow.</span></div>
+            <div><strong class="text-white">Composiçêo automática é real</strong><span class="text-neutral-400"> — data-analysis → chart-visualization acontece sem orquestraçêo explícita. É o shape certo do DeerFlow.</span></div>
           </div>
         </div>
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Módulo 2.2 — Middleware e execução | DeerFlow 2.0 | ARCKHÉ AI</title>
+  <title>Módulo 2.2 — Middleware e execuçêo | DeerFlow 2.0 | ARCKHÉ AI</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script>
@@ -109,9 +109,9 @@
   <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÓDULO 2.2</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">⚙️ Middleware e execução</h1>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">⚙️ Middleware e execuçêo</h1>
       <p class="text-lg text-neutral-400 max-w-3xl">
-        Toda tool call no DeerFlow passa por uma esteira. Entender essa esteira é a diferença entre apagar incêndios em produção e ter um agente que se auto-corrige quando uma API externa cai.
+        Toda tool call no DeerFlow passa por uma esteira. Entender essa esteira é a diferença entre apagar incêndios em produçêo e ter um agente que se auto-corrige quando uma API externa cai.
       </p>
       <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
         <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">5</div><div class="text-xs text-neutral-400">Tópicos</div></div>
@@ -136,23 +136,23 @@
         <h2 class="text-2xl font-bold">🔗 Fluxo do middleware</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        <strong class="text-blue-400">Middleware</strong>, no DeerFlow, é uma camada plugável que intercepta cada tool call <em>antes</em> e <em>depois</em> da execução real. Pense em <em>onion layers</em>: o pedido desce por N middlewares até chegar ao handler da tool, e a resposta sobe pela mesma pilha em ordem inversa. Qualquer camada pode logar, transformar, bloquear ou substituir.
+        <strong class="text-blue-400">Middleware</strong>, no DeerFlow, é uma camada plugável que intercepta cada tool call <em>antes</em> e <em>depois</em> da execuçêo real. Pense em <em>onion layers</em>: o pedido desce por N middlewares até chegar ao handler da tool, e a resposta sobe pela mesma pilha em ordem inversa. Qualquer camada pode logar, transformar, bloquear ou substituir.
       </p>
 
       <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🎯</span> Conceito Central</h3>
-        <p class="text-neutral-300 mb-4">Um middleware é uma função <code class="text-blue-400">async (call, next) -&gt; result</code>. Recebe o <em>call</em> (nome da tool + args + contexto), pode alterá-lo, chama <code class="text-blue-400">next(call)</code> para descer na pilha, recebe o <em>result</em>, pode alterá-lo, e devolve. É praticamente o mesmo padrão de Express/Koa — e funciona pelos mesmos motivos.</p>
+        <p class="text-neutral-300 mb-4">Um middleware é uma funçêo <code class="text-blue-400">async (call, next) -&gt; result</code>. Recebe o <em>call</em> (nome da tool + args + contexto), pode alterá-lo, chama <code class="text-blue-400">next(call)</code> para descer na pilha, recebe o <em>result</em>, pode alterá-lo, e devolve. É praticamente o mesmo padrêo de Express/Koa — e funciona pelos mesmos motivos.</p>
         <ul class="space-y-2 text-neutral-300 text-sm">
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Antes do next</strong> — validação de args, rewrite, deny-list, medição de latência inicial.</span></li>
+          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Antes do next</strong> — validaçêo de args, rewrite, deny-list, mediçêo de latência inicial.</span></li>
           <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>next(call)</strong> — passa adiante; se nada interceptou, vai até o handler real.</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Depois do next</strong> — log de resultado, redaction, métricas, retry, conversão de erro.</span></li>
+          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Depois do next</strong> — log de resultado, redaction, métricas, retry, conversêo de erro.</span></li>
           <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Short-circuit</strong> — middleware pode devolver resultado <em>sem</em> chamar next (ex: cache hit, deny).</span></li>
         </ul>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Ordem importa</h3>
-        <p class="text-neutral-300">A ordem de registro define a ordem de execução. Guardrail deny-list sempre primeiro (short-circuit barato). Observabilidade/logging depois, para ver mesmo o que foi bloqueado. Retry e cache vão no meio, perto do handler. Inverter essa ordem transforma o middleware de ativo protetor em contador de bala perdida.</p>
+        <p class="text-neutral-300">A ordem de registro define a ordem de execuçêo. Guardrail deny-list sempre primeiro (short-circuit barato). Observabilidade/logging depois, para ver mesmo o que foi bloqueado. Retry e cache vêo no meio, perto do handler. Inverter essa ordem transforma o middleware de ativo protetor em contador de bala perdida.</p>
       </div>
     </section>
 
@@ -163,7 +163,7 @@
         <h2 class="text-2xl font-bold">📨 Despacho via agent_name</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Quando o lead_agent decide acionar um custom agent, ele <strong>não</strong> faz import Python direto. Ele emite uma tool call especial com <code class="text-blue-400">agent_name</code> no payload e deixa o middleware resolver. Isso parece cerimonial, mas é o que permite swap de agentes sem reboot e A/B testing de versões.
+        Quando o lead_agent decide acionar um custom agent, ele <strong>nêo</strong> faz import Python direto. Ele emite uma tool call especial com <code class="text-blue-400">agent_name</code> no payload e deixa o middleware resolver. Isso parece cerimonial, mas é o que permite swap de agentes sem reboot e A/B testing de versões.
       </p>
 
       <div class="space-y-6 mb-6">
@@ -172,7 +172,7 @@
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">lead_agent emite dispatch</h4>
             <p class="text-sm text-neutral-400 mb-3">tool_call = {"name": "dispatch_agent", "args": {"agent_name": "security-auditor", ...}}</p>
-            <p class="text-neutral-300 text-sm">O plano diz "isso é trabalho do security-auditor". Em vez de importar a classe, o lead_agent produz uma tool call estruturada. A instrução vai no campo <code class="text-blue-400">args.task</code>.</p>
+            <p class="text-neutral-300 text-sm">O plano diz "isso é trabalho do security-auditor". Em vez de importar a classe, o lead_agent produz uma tool call estruturada. A instruçêo vai no campo <code class="text-blue-400">args.task</code>.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -180,7 +180,7 @@
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Middleware de agents resolve</h4>
             <p class="text-sm text-neutral-400 mb-3">Lookup no registry, aplica policy, injeta contexto isolado</p>
-            <p class="text-neutral-300 text-sm">Um middleware dedicado captura calls com <code class="text-blue-400">name == "dispatch_agent"</code>, consulta o registry (onde agentes estão registrados por nome), monta o subgrafo do custom agent e executa.</p>
+            <p class="text-neutral-300 text-sm">Um middleware dedicado captura calls com <code class="text-blue-400">name == "dispatch_agent"</code>, consulta o registry (onde agentes estêo registrados por nome), monta o subgrafo do custom agent e executa.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -188,7 +188,7 @@
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Custom agent roda em sub-state</h4>
             <p class="text-sm text-neutral-400 mb-3">Contexto próprio, memória própria, tools restritas</p>
-            <p class="text-neutral-300 text-sm">O custom agent começa com state isolado: só o <em>task</em> e as memórias pertinentes a ele. Ao terminar, devolve um resumo. O lead_agent vê esse resumo — não vê o histórico interno.</p>
+            <p class="text-neutral-300 text-sm">O custom agent começa com state isolado: só o <em>task</em> e as memórias pertinentes a ele. Ao terminar, devolve um resumo. O lead_agent vê esse resumo — nêo vê o histórico interno.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -196,7 +196,7 @@
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Resumo retorna como tool result</h4>
             <p class="text-sm text-neutral-400 mb-3">lead_agent segue o grafo normal como se fosse qualquer tool</p>
-            <p class="text-neutral-300 text-sm">Do ponto de vista do lead_agent, custom agent é <em>uma tool</em>. Isso simplifica o grafo e explica por que acoplar um novo agente não exige mudar o lead.</p>
+            <p class="text-neutral-300 text-sm">Do ponto de vista do lead_agent, custom agent é <em>uma tool</em>. Isso simplifica o grafo e explica por que acoplar um novo agente nêo exige mudar o lead.</p>
           </div>
         </div>
       </div>
@@ -209,15 +209,15 @@
         <h2 class="text-2xl font-bold">🔄 Ciclo de vida de uma tool call</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Aqui está a sequência completa — do momento em que o modelo produz o JSON da tool_call até a volta ao loop. São sete etapas, todas relevantes quando algo não funciona.
+        Aqui está a sequência completa — do momento em que o modelo produz o JSON da tool_call até a volta ao loop. Sêo sete etapas, todas relevantes quando algo nêo funciona.
       </p>
 
       <div class="space-y-6 mb-6">
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">1</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">Parse &amp; validação de schema</h4>
-            <p class="text-neutral-300 text-sm">tool_call do LLM vira um objeto tipado. Args são validados contra o JSON schema registrado da tool. Erro aqui vira mensagem de sistema de volta ao modelo — ele reformata sozinho.</p>
+            <h4 class="font-semibold text-white mb-2">Parse &amp; validaçêo de schema</h4>
+            <p class="text-neutral-300 text-sm">tool_call do LLM vira um objeto tipado. Args sêo validados contra o JSON schema registrado da tool. Erro aqui vira mensagem de sistema de volta ao modelo — ele reformata sozinho.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -231,7 +231,7 @@
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">3</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Pré-processamento</h4>
-            <p class="text-neutral-300 text-sm">Injeção de credenciais, rewrite de args (ex: normalizar paths), quota check. O modelo não vê credenciais — elas entram aqui, fora do prompt.</p>
+            <p class="text-neutral-300 text-sm">Injeçêo de credenciais, rewrite de args (ex: normalizar paths), quota check. O modelo nêo vê credenciais — elas entram aqui, fora do prompt.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -245,14 +245,14 @@
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">5</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Pós-processamento</h4>
-            <p class="text-neutral-300 text-sm">Redaction de PII, truncation de outputs grandes, sumarização por sub-agent quando o resultado estoura o threshold configurado.</p>
+            <p class="text-neutral-300 text-sm">Redaction de PII, truncation de outputs grandes, sumarizaçêo por sub-agent quando o resultado estoura o threshold configurado.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">6</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">State update</h4>
-            <p class="text-neutral-300 text-sm">Resultado é anexado ao histórico de mensagens do state, memórias "worth remembering" são detectadas, métricas são publicadas.</p>
+            <p class="text-neutral-300 text-sm">Resultado é anexado ao histórico de mensagens do state, memórias "worth remembering" sêo detectadas, métricas sêo publicadas.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -269,10 +269,10 @@
     <section id="topico-4" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">💥 Recuperação de erros</h2>
+        <h2 class="text-2xl font-bold">💥 Recuperaçêo de erros</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        APIs externas falham. Tools alucinam args. Sandbox estoura memória. A pergunta não é "se" mas "quando" — e o middleware é o lugar certo para tratar isso sem que o grafo inteiro caia.
+        APIs externas falham. Tools alucinam args. Sandbox estoura memória. A pergunta nêo é "se" mas "quando" — e o middleware é o lugar certo para tratar isso sem que o grafo inteiro caia.
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -289,11 +289,11 @@
         <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
           <h4 class="font-bold text-red-400 mb-4">✗ Evitar</h4>
           <ul class="space-y-3 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Retry infinito em 4xx — são erros de args, insistir piora.</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Swallowing de exceção: retornar "ok" quando deu erro.</span></li>
+            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Retry infinito em 4xx — sêo erros de args, insistir piora.</span></li>
+            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Swallowing de exceçêo: retornar "ok" quando deu erro.</span></li>
             <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Crash do grafo inteiro por falha de tool opcional.</span></li>
             <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Expor stacktraces de Python direto no prompt do modelo.</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Fail-fast global — bom é fail-fast <em>por tool</em>, não por sessão.</span></li>
+            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Fail-fast global — bom é fail-fast <em>por tool</em>, nêo por sessêo.</span></li>
           </ul>
         </div>
       </div>
@@ -304,7 +304,7 @@
           <li><strong>3 retries</strong> com backoff <code class="text-cyan-400">1s, 2s, 4s</code> cobre 95% das falhas transientes em APIs públicas.</li>
           <li><strong>Circuit breaker</strong> abre após 5 falhas consecutivas e reabre após 60s (half-open probe).</li>
           <li><strong>Budget por turno</strong>: máximo N tool calls por turno (default 20) evita loops custosos.</li>
-          <li><strong>Timeout padrão</strong> de 30s por tool; IO realmente lenta opta-in explicitamente.</li>
+          <li><strong>Timeout padrêo</strong> de 30s por tool; IO realmente lenta opta-in explicitamente.</li>
         </ul>
       </div>
     </section>
@@ -316,7 +316,7 @@
         <h2 class="text-2xl font-bold">🧪 Lab: middleware que loga tools</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Escrever o primeiro middleware. Objetivo simples: interceptar cada tool call, logar nome + duração + sucesso, e devolver. Trinta linhas de Python. Depois dessa base você adiciona retry, quota e guardrail sem esforço.
+        Escrever o primeiro middleware. Objetivo simples: interceptar cada tool call, logar nome + duraçêo + sucesso, e devolver. Trinta linhas de Python. Depois dessa base você adiciona retry, quota e guardrail sem esforço.
       </p>
 
       <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
@@ -345,13 +345,13 @@ class ToolLogger(ToolMiddleware):
           <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">3.</span><div><strong class="text-white">Registrar no bootstrap</strong>. Em <code class="text-blue-400">deerflow/app/bootstrap.py</code>, adicione <code class="text-blue-400">harness.middleware.add(ToolLogger())</code> <em>antes</em> dos middlewares já existentes.</div></li>
           <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">4.</span><div><strong class="text-white">Reiniciar</strong>: <code class="text-blue-400">docker compose restart deerflow</code>. Confirme no log startup a linha <em>"middleware registered: tool_logger"</em>.</div></li>
           <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">5.</span><div><strong class="text-white">Rodar query</strong> que use pelo menos uma tool (ex: <em>"pesquise sobre LangGraph e me dê 3 referências"</em>). Em seguida <code class="text-blue-400">docker compose logs --tail=50 deerflow</code> e procure linhas <code class="text-blue-400">tool_ok</code>.</div></li>
-          <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">6.</span><div><strong class="text-white">Validar no LangSmith</strong>: cruze as durações do log com o trace — devem bater em ±10ms. Se não baterem, provavelmente há middleware extra entre o logger e o handler.</div></li>
+          <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">6.</span><div><strong class="text-white">Validar no LangSmith</strong>: cruze as durações do log com o trace — devem bater em ±10ms. Se nêo baterem, provavelmente há middleware extra entre o logger e o handler.</div></li>
         </ol>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Entregável</h3>
-        <p class="text-neutral-300">Snippet do log mostrando 3+ linhas <code class="text-primary">tool_ok</code> com durações reais + screenshot do trace correspondente no LangSmith. Com isso você prova que o middleware está na posição certa da pilha.</p>
+        <p class="text-neutral-300">Snippet do log mostrando 3+ linhas <code class="text-primary">tool_ok</code> com durações reais + screenshot do trace correspondente no LangSmith. Com isso você prova que o middleware está na posiçêo certa da pilha.</p>
       </div>
     </section>
 
@@ -363,11 +363,11 @@ class ToolLogger(ToolMiddleware):
         <div class="space-y-4 mb-8">
           <div class="flex items-start space-x-3">
             <span class="text-blue-400 mt-1">✓</span>
-            <div><strong class="text-white">Middleware é onion: antes → next → depois</strong><span class="text-neutral-400"> — o mesmo padrão de Express/Koa aplicado a tool calls.</span></div>
+            <div><strong class="text-white">Middleware é onion: antes → next → depois</strong><span class="text-neutral-400"> — o mesmo padrêo de Express/Koa aplicado a tool calls.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-blue-400 mt-1">✓</span>
-            <div><strong class="text-white">Custom agent é uma tool call via agent_name</strong><span class="text-neutral-400"> — lead_agent não importa classes, despacha via registry.</span></div>
+            <div><strong class="text-white">Custom agent é uma tool call via agent_name</strong><span class="text-neutral-400"> — lead_agent nêo importa classes, despacha via registry.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-blue-400 mt-1">✓</span>
@@ -375,7 +375,7 @@ class ToolLogger(ToolMiddleware):
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-blue-400 mt-1">✓</span>
-            <div><strong class="text-white">Erro não derruba o grafo</strong><span class="text-neutral-400"> — retry com backoff para transiente, mensagem legível para args errados, circuit breaker para falha persistente.</span></div>
+            <div><strong class="text-white">Erro nêo derruba o grafo</strong><span class="text-neutral-400"> — retry com backoff para transiente, mensagem legível para args errados, circuit breaker para falha persistente.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-blue-400 mt-1">✓</span>

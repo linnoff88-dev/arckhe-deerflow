@@ -143,9 +143,9 @@
 
       <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center"><span class="mr-2">🎯</span> Conceito Central</h3>
-        <p class="text-neutral-300 mb-4">O Embedded Client resolve dois problemas que o servidor HTTP não resolve bem:</p>
+        <p class="text-neutral-300 mb-4">O Embedded Client resolve dois problemas que o servidor HTTP nêo resolve bem:</p>
         <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><strong>Latência zero</strong> — nada de loopback TCP, serialização JSON, ou processo extra</li>
+          <li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><strong>Latência zero</strong> — nada de loopback TCP, serializaçêo JSON, ou processo extra</li>
           <li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><strong>Contexto do processo</strong> — variáveis locais, conexões abertas, objetos Python podem ser passados direto</li>
           <li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><strong>Ciclo de vida explícito</strong> — você controla quando o harness nasce e morre, sem cron restart</li>
           <li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><strong>Uso em notebook</strong> — Jupyter chama <code>await harness.chat(...)</code> e a resposta vira célula</li>
@@ -180,7 +180,7 @@ h.close()</code></pre>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
-        <p class="text-neutral-300">Use <code>Harness</code> como context manager (<code>with Harness.from_config(...) as h:</code>) em scripts. Ele fecha o sandbox Docker, escreve o trace final e libera conexões mesmo se o script falhar. É a diferença entre "um container órfão a cada run" e "ambiente limpo".</p>
+        <p class="text-neutral-300">Use <code>Harness</code> como context manager (<code>with Harness.from_config(...) as h:</code>) em scripts. Ele fecha o sandbox Docker, escreve o trace final e libera conexões mesmo se o script falhar. É a diferença entre "um container órfêo a cada run" e "ambiente limpo".</p>
       </div>
     </section>
 
@@ -188,10 +188,10 @@ h.close()</code></pre>
     <section id="topico-2" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">🌐 API gateway e documentação de API</h2>
+        <h2 class="text-2xl font-bold">🌐 API gateway e documentaçêo de API</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Quando embutir direto não faz sentido (app poliglota, infra segrega tudo em serviços, time que não quer mexer em Python), o DeerFlow expõe um <strong class="text-purple-400">API gateway HTTP</strong> com endpoints versionados, documentação OpenAPI e autenticação por token. Do ponto de vista do seu app, é "mais um serviço REST" — separação limpa entre frontend e harness.
+        Quando embutir direto nêo faz sentido (app poliglota, infra segrega tudo em serviços, time que nêo quer mexer em Python), o DeerFlow expõe um <strong class="text-purple-400">API gateway HTTP</strong> com endpoints versionados, documentaçêo OpenAPI e autenticaçêo por token. Do ponto de vista do seu app, é "mais um serviço REST" — separaçêo limpa entre frontend e harness.
       </p>
 
       <div class="space-y-6 mb-6">
@@ -206,9 +206,9 @@ h.close()</code></pre>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center"><span class="text-purple-400 font-bold">2</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">Autenticação</h4>
-            <p class="text-sm text-neutral-400 mb-3">API key por aplicação, tokens JWT por usuário</p>
-            <p class="text-neutral-300 text-sm">Duas camadas: a <em>aplicação</em> se autentica no gateway via header <code>X-DeerFlow-Key</code>; o <em>usuário final</em> vem num JWT opcional que o gateway valida e usa para isolar memória. Ambas precisam estar ligadas em prod.</p>
+            <h4 class="font-semibold text-white mb-2">Autenticaçêo</h4>
+            <p class="text-sm text-neutral-400 mb-3">API key por aplicaçêo, tokens JWT por usuário</p>
+            <p class="text-neutral-300 text-sm">Duas camadas: a <em>aplicaçêo</em> se autentica no gateway via header <code>X-DeerFlow-Key</code>; o <em>usuário final</em> vem num JWT opcional que o gateway valida e usa para isolar memória. Ambas precisam estar ligadas em prod.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -216,7 +216,7 @@ h.close()</code></pre>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Versionamento</h4>
             <p class="text-sm text-neutral-400 mb-3">/v1 estável, /v2 em beta com breaking changes</p>
-            <p class="text-neutral-300 text-sm">O DeerFlow segue semver no gateway: /v1 é contrato estável, /v2-beta pode mudar. Upgrade do core do harness não quebra /v1. Se seu app depende de evento novo, pode optar por /v2-beta e aceitar instabilidade.</p>
+            <p class="text-neutral-300 text-sm">O DeerFlow segue semver no gateway: /v1 é contrato estável, /v2-beta pode mudar. Upgrade do core do harness nêo quebra /v1. Se seu app depende de evento novo, pode optar por /v2-beta e aceitar instabilidade.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -224,7 +224,7 @@ h.close()</code></pre>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">OpenAPI e clients gerados</h4>
             <p class="text-sm text-neutral-400 mb-3">/docs serve Swagger UI e schema bruto</p>
-            <p class="text-neutral-300 text-sm">O gateway publica <code>/openapi.json</code> e <code>/docs</code> (Swagger UI). Use <code>openapi-generator</code> para gerar clients em TypeScript, Go, Rust, Java. O contrato vira source of truth — se o schema mudou, o client quebra no build, não em runtime.</p>
+            <p class="text-neutral-300 text-sm">O gateway publica <code>/openapi.json</code> e <code>/docs</code> (Swagger UI). Use <code>openapi-generator</code> para gerar clients em TypeScript, Go, Rust, Java. O contrato vira source of truth — se o schema mudou, o client quebra no build, nêo em runtime.</p>
           </div>
         </div>
       </div>
@@ -245,15 +245,15 @@ h.close()</code></pre>
         <p class="text-neutral-300 mb-4">Após o segundo turno (usuário + agente), um job assíncrono pega as 2 mensagens iniciais e passa para um modelo barato com o prompt "gere um título de 3 a 6 palavras". O resultado vira campo na conversa e pode ser regenerado sob demanda se o tópico mudar muito.</p>
         <ul class="space-y-2 text-neutral-300 text-sm">
           <li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><strong>Modelo</strong> — sempre o mais barato (gpt-5-mini, gemini-2.5-flash); nunca o lead_agent</li>
-          <li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><strong>Assincronia</strong> — não bloqueia o primeiro turno; o título aparece segundos depois</li>
-          <li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><strong>Cache</strong> — gerado 1 vez, não regerado a cada turno</li>
-          <li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><strong>Regeneração manual</strong> — <code>POST /v1/conversations/{id}/title?regenerate=true</code></li>
+          <li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><strong>Assincronia</strong> — nêo bloqueia o primeiro turno; o título aparece segundos depois</li>
+          <li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><strong>Cache</strong> — gerado 1 vez, nêo regerado a cada turno</li>
+          <li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><strong>Regeneraçêo manual</strong> — <code>POST /v1/conversations/{id}/title?regenerate=true</code></li>
         </ul>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Quando desligar</h3>
-        <p class="text-neutral-300">Se seu app tem domínio muito específico (ex.: tickets de suporte numerados), auto title atrapalha — você quer "Ticket #1234" no lugar de "Usuário perdeu acesso ao painel". Desligue com <code>auto_title: false</code> na config e preencha o título você via API. Também vale desligar em contextos sensíveis (saúde, jurídico) onde o título não deveria existir em clear text.</p>
+        <p class="text-neutral-300">Se seu app tem domínio muito específico (ex.: tickets de suporte numerados), auto title atrapalha — você quer "Ticket #1234" no lugar de "Usuário perdeu acesso ao painel". Desligue com <code>auto_title: false</code> na config e preencha o título você via API. Também vale desligar em contextos sensíveis (saúde, jurídico) onde o título nêo deveria existir em clear text.</p>
       </div>
     </section>
 
@@ -264,7 +264,7 @@ h.close()</code></pre>
         <h2 class="text-2xl font-bold">📡 Streaming server-side — SSE e eventos ricos</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Streaming não é só "resposta aparece digitando". É a forma correta de mostrar o agente <em>pensando</em> — tool sendo chamada, sub-agent sendo iniciado, resultado parcial chegando. O DeerFlow usa <strong class="text-purple-400">Server-Sent Events (SSE)</strong> com eventos tipados por default, e expõe WebSocket para casos em que o cliente precisa enviar dados bidirecionalmente durante o stream.
+        Streaming nêo é só "resposta aparece digitando". É a forma correta de mostrar o agente <em>pensando</em> — tool sendo chamada, sub-agent sendo iniciado, resultado parcial chegando. O DeerFlow usa <strong class="text-purple-400">Server-Sent Events (SSE)</strong> com eventos tipados por default, e expõe WebSocket para casos em que o cliente precisa enviar dados bidirecionalmente durante o stream.
       </p>
 
       <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
@@ -295,7 +295,7 @@ h.close()</code></pre>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Backpressure</h3>
-        <p class="text-neutral-300">Se seu cliente é lento (ex.: browser atrás de proxy corporativo), o buffer do SSE enche. O DeerFlow tem estratégia default: drop de eventos <code>message.delta</code> (o modelo continua gerando) mas preserva <code>tool.*</code> e <code>error</code>. Se seu cliente precisa de todo token, use WebSocket com ack, não SSE.</p>
+        <p class="text-neutral-300">Se seu cliente é lento (ex.: browser atrás de proxy corporativo), o buffer do SSE enche. O DeerFlow tem estratégia default: drop de eventos <code>message.delta</code> (o modelo continua gerando) mas preserva <code>tool.*</code> e <code>error</code>. Se seu cliente precisa de todo token, use WebSocket com ack, nêo SSE.</p>
       </div>
     </section>
 
@@ -335,7 +335,7 @@ h.close()</code></pre>
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center"><span class="text-purple-400 font-bold">4</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Inspecione os artefatos</h4>
-            <p class="text-neutral-300 text-sm">O script imprime paths dos PNGs gerados. Abra-os. Confirme que o gráfico faz sentido para seu CSV. Se o gráfico está errado, a causa é prompt ou modelo — não o harness.</p>
+            <p class="text-neutral-300 text-sm">O script imprime paths dos PNGs gerados. Abra-os. Confirme que o gráfico faz sentido para seu CSV. Se o gráfico está errado, a causa é prompt ou modelo — nêo o harness.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -349,7 +349,7 @@ h.close()</code></pre>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Próximo passo natural</h3>
-        <p class="text-neutral-300">Se o script funcionou, transforme-o em uma função chamável de um endpoint FastAPI. Você acabou de construir, em ~100 linhas, um serviço próprio com um agente rodando dentro. A única diferença para o API gateway oficial é que esse é <em>seu</em> — você escolhe o schema e só expõe o que precisa.</p>
+        <p class="text-neutral-300">Se o script funcionou, transforme-o em uma funçêo chamável de um endpoint FastAPI. Você acabou de construir, em ~100 linhas, um serviço próprio com um agente rodando dentro. A única diferença para o API gateway oficial é que esse é <em>seu</em> — você escolhe o schema e só expõe o que precisa.</p>
       </div>
     </section>
 
@@ -377,7 +377,7 @@ h.close()</code></pre>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-purple-400 mt-1">✓</span>
-            <div><strong class="text-white">Backpressure é decisão de design</strong><span class="text-neutral-400"> — SSE droppa deltas em cliente lento, preserva tool e error. WebSocket com ack se você precisa de todo token.</span></div>
+            <div><strong class="text-white">Backpressure é decisêo de design</strong><span class="text-neutral-400"> — SSE droppa deltas em cliente lento, preserva tool e error. WebSocket com ack se você precisa de todo token.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-purple-400 mt-1">✓</span>
@@ -388,7 +388,7 @@ h.close()</code></pre>
         <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
           <h3 class="font-semibold text-purple-400 mb-2">Próximo Módulo:</h3>
           <p class="text-neutral-300">3.5 — 🤝 Contribuindo upstream</p>
-          <p class="text-neutral-400 text-sm mt-1">Último módulo da trilha: como devolver valor para o projeto via PRs que passam na primeira revisão.</p>
+          <p class="text-neutral-400 text-sm mt-1">Último módulo da trilha: como devolver valor para o projeto via PRs que passam na primeira revisêo.</p>
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-start">

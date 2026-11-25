@@ -112,7 +112,7 @@
       <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MÓDULO 3.1</span>
       <h1 class="text-3xl sm:text-4xl font-bold mb-4">🧠 Providers de modelo e roteamento</h1>
       <p class="text-lg text-neutral-400 max-w-3xl">
-        O DeerFlow fala com LLMs através de uma camada fina de providers. Aqui você aprende a plugar OpenRouter, LiteLLM, vLLM local e CLIs como Codex e Claude Code — e a decidir entre eles sem apelar para intuição.
+        O DeerFlow fala com LLMs através de uma camada fina de providers. Aqui você aprende a plugar OpenRouter, LiteLLM, vLLM local e CLIs como Codex e Claude Code — e a decidir entre eles sem apelar para intuiçêo.
       </p>
       <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
         <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
@@ -128,7 +128,7 @@
     <!-- Intro -->
     <div class="mb-12 bg-primary/10 rounded-xl border border-primary/30 p-6">
       <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Como ler este módulo</h3>
-      <p class="text-neutral-300">A camada de providers é o ponto em que DeerFlow vira agnóstico de LLM — ou não. Escolhas feitas aqui ecoam em custo de billing, latência percebida e qualidade de output. Leia os 5 primeiros tópicos antes de ir para o lab: <strong class="text-primary">o lab só faz sentido depois de você entender por que está comparando três modelos, não só como</strong>.</p>
+      <p class="text-neutral-300">A camada de providers é o ponto em que DeerFlow vira agnóstico de LLM — ou nêo. Escolhas feitas aqui ecoam em custo de billing, latência percebida e qualidade de output. Leia os 5 primeiros tópicos antes de ir para o lab: <strong class="text-primary">o lab só faz sentido depois de você entender por que está comparando três modelos, nêo só como</strong>.</p>
     </div>
 
     <!-- TOPICO 1 -->
@@ -138,7 +138,7 @@
         <h2 class="text-2xl font-bold">🔌 ChatOpenAI com base_url — OpenRouter, LiteLLM e gateways</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        O provider padrão do DeerFlow é uma camada fina em volta do <strong class="text-purple-400">langchain_openai.ChatOpenAI</strong>. Ele aceita um <code class="text-purple-400">base_url</code> arbitrário, o que significa que qualquer servidor OpenAI-compatible vira provider sem uma linha de código novo. É essa propriedade que transforma um harness single-vendor em um router multi-provider — sem reescrever nada.
+        O provider padrêo do DeerFlow é uma camada fina em volta do <strong class="text-purple-400">langchain_openai.ChatOpenAI</strong>. Ele aceita um <code class="text-purple-400">base_url</code> arbitrário, o que significa que qualquer servidor OpenAI-compatible vira provider sem uma linha de código novo. É essa propriedade que transforma um harness single-vendor em um router multi-provider — sem reescrever nada.
       </p>
 
       <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
@@ -170,7 +170,7 @@ REASONING_MODEL:
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
-        <p class="text-neutral-300">Não use OpenRouter direto em produção sem um proxy LiteLLM no meio. OpenRouter é excelente para descobrir modelos e consolidar billing, mas você ainda quer rate-limit por equipe, caching de completions idênticas e um único lugar para matar um provider quando ele pifar. LiteLLM cobre isso e aceita OpenRouter como backend — é a combinação padrão.</p>
+        <p class="text-neutral-300">Nêo use OpenRouter direto em produçêo sem um proxy LiteLLM no meio. OpenRouter é excelente para descobrir modelos e consolidar billing, mas você ainda quer rate-limit por equipe, caching de completions idênticas e um único lugar para matar um provider quando ele pifar. LiteLLM cobre isso e aceita OpenRouter como backend — é a combinaçêo padrêo.</p>
       </div>
     </section>
 
@@ -181,17 +181,17 @@ REASONING_MODEL:
         <h2 class="text-2xl font-bold">🆕 use_responses_api — o novo /v1/responses da OpenAI</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        A OpenAI introduziu <strong class="text-purple-400">/v1/responses</strong> como substituto modernizado de <code>/v1/chat/completions</code>. DeerFlow expõe isso via a flag <code class="text-purple-400">use_responses_api: true</code> no bloco do modelo. Não é cosmético: a Responses API muda como tools são declaradas, como streams emitem eventos, e como state persiste entre chamadas.
+        A OpenAI introduziu <strong class="text-purple-400">/v1/responses</strong> como substituto modernizado de <code>/v1/chat/completions</code>. DeerFlow expõe isso via a flag <code class="text-purple-400">use_responses_api: true</code> no bloco do modelo. Nêo é cosmético: a Responses API muda como tools sêo declaradas, como streams emitem eventos, e como state persiste entre chamadas.
       </p>
 
       <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">📊</span> Dados: diferenças práticas</h3>
         <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong>Tools</strong> — Responses API aceita built-in tools (web_search, file_search, code_interpreter) sem você implementar; Chat Completions não</li>
+          <li><strong>Tools</strong> — Responses API aceita built-in tools (web_search, file_search, code_interpreter) sem você implementar; Chat Completions nêo</li>
           <li><strong>State</strong> — Responses API pode manter <code>previous_response_id</code>, reduzindo tokens enviados em turnos subsequentes</li>
           <li><strong>Streaming</strong> — eventos tipados (response.created, response.output_text.delta, response.tool_call.delta) em vez de deltas opacos</li>
           <li><strong>Reasoning</strong> — modelos o1/o3/gpt-5 expõem <code>reasoning.effort</code> nativamente apenas na Responses API</li>
-          <li><strong>Compatibilidade</strong> — só funciona em endpoint oficial da OpenAI ou gateways que implementam o contrato (Azure ainda não, em abril/2026)</li>
+          <li><strong>Compatibilidade</strong> — só funciona em endpoint oficial da OpenAI ou gateways que implementam o contrato (Azure ainda nêo, em abril/2026)</li>
         </ul>
       </div>
 
@@ -206,11 +206,11 @@ REASONING_MODEL:
           </ul>
         </div>
         <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-4">✗ Quando NÃO ligar</h4>
+          <h4 class="font-bold text-red-400 mb-4">✗ Quando NêO ligar</h4>
           <ul class="space-y-3 text-neutral-300 text-sm">
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Provider é OpenRouter/LiteLLM (ainda não cobrem Responses API completa)</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Modelo não-OpenAI (Claude, Gemini, Qwen) — não entende o formato</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Middleware do DeerFlow faz mutação de <code>messages[]</code> em Chat format</span></li>
+            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Provider é OpenRouter/LiteLLM (ainda nêo cobrem Responses API completa)</span></li>
+            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Modelo nêo-OpenAI (Claude, Gemini, Qwen) — nêo entende o formato</span></li>
+            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Middleware do DeerFlow faz mutaçêo de <code>messages[]</code> em Chat format</span></li>
             <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Precisa previsibilidade de schema — Responses API ainda evolui</span></li>
           </ul>
         </div>
@@ -224,7 +224,7 @@ REASONING_MODEL:
         <h2 class="text-2xl font-bold">🖥️ vLLM local com VllmChatModel</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        <strong class="text-purple-400">vLLM</strong> é o servidor de inference open-source dominante para modelos open-weights. DeerFlow traz um <strong class="text-purple-400">VllmChatModel</strong> dedicado que fala vLLM diretamente, com suporte a reasoning de modelos como Qwen3-Thinking, DeepSeek-R1 e variantes Hermes. Não é só "ChatOpenAI apontando para localhost": o provider especializado entende tags de reasoning, continuations e streaming tool-calls em modelos que não seguem o formato OpenAI exatamente.
+        <strong class="text-purple-400">vLLM</strong> é o servidor de inference open-source dominante para modelos open-weights. DeerFlow traz um <strong class="text-purple-400">VllmChatModel</strong> dedicado que fala vLLM diretamente, com suporte a reasoning de modelos como Qwen3-Thinking, DeepSeek-R1 e variantes Hermes. Nêo é só "ChatOpenAI apontando para localhost": o provider especializado entende tags de reasoning, continuations e streaming tool-calls em modelos que nêo seguem o formato OpenAI exatamente.
       </p>
 
       <div class="space-y-6 mb-6">
@@ -257,15 +257,15 @@ REASONING_MODEL:
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Valide tool calling</h4>
             <p class="text-sm text-neutral-400 mb-3">Tool calling em modelos open-weights é historicamente frágil — teste antes de confiar</p>
-            <p class="text-neutral-300 text-sm">Rode uma skill simples que força tool call (ex.: data-analysis com CSV minúsculo). Se a skill não aciona a tool, o parser do vLLM está errado ou o modelo não foi fine-tuned para tool calling. Troque o <code>tool-call-parser</code> ou o modelo.</p>
+            <p class="text-neutral-300 text-sm">Rode uma skill simples que força tool call (ex.: data-analysis com CSV minúsculo). Se a skill nêo aciona a tool, o parser do vLLM está errado ou o modelo nêo foi fine-tuned para tool calling. Troque o <code>tool-call-parser</code> ou o modelo.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center"><span class="text-purple-400 font-bold">4</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Meça throughput real</h4>
-            <p class="text-sm text-neutral-400 mb-3">vLLM vende throughput, não latência — avalie com carga representativa</p>
-            <p class="text-neutral-300 text-sm">Um Qwen3-32B numa H100 dá ~60-80 tokens/s para 1 usuário e 400+ tokens/s agregados em 8 usuários paralelos. Latência por requisição única é pior que GPT-4o-mini via API; ganho real é escala e dados sensíveis.</p>
+            <p class="text-sm text-neutral-400 mb-3">vLLM vende throughput, nêo latência — avalie com carga representativa</p>
+            <p class="text-neutral-300 text-sm">Um Qwen3-32B numa H100 dá ~60-80 tokens/s para 1 usuário e 400+ tokens/s agregados em 8 usuários paralelos. Latência por requisiçêo única é pior que GPT-4o-mini via API; ganho real é escala e dados sensíveis.</p>
           </div>
         </div>
       </div>
@@ -287,7 +287,7 @@ REASONING_MODEL:
         <ul class="space-y-2 text-neutral-300 text-sm">
           <li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><strong>Codex CLI</strong> — usa subscription ChatGPT Plus/Team/Enterprise, modelos gpt-5 via CLI oficial</li>
           <li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><strong>Claude Code OAuth</strong> — usa subscription Claude Max/Team, modelos Opus/Sonnet 4.6 via claude CLI</li>
-          <li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><strong>Sem API key</strong> — o OAuth do CLI já fez o trabalho de autenticação</li>
+          <li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><strong>Sem API key</strong> — o OAuth do CLI já fez o trabalho de autenticaçêo</li>
         </ul>
       </div>
 
@@ -305,8 +305,8 @@ REASONING_MODEL:
           <h4 class="font-bold text-red-400 mb-4">✗ Evitar</h4>
           <ul class="space-y-3 text-neutral-300 text-sm">
             <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Deploy em servidor compartilhado — vai logar com a conta de quem?</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Produção multi-tenant — viola ToS das duas subscriptions</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>CI/CD — sessões expiram, OAuth não renova automaticamente</span></li>
+            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Produçêo multi-tenant — viola ToS das duas subscriptions</span></li>
+            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>CI/CD — sessões expiram, OAuth nêo renova automaticamente</span></li>
             <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Volume &gt;10k req/dia — você vai ser rate-limited e parar o agente</span></li>
           </ul>
         </div>
@@ -314,7 +314,7 @@ REASONING_MODEL:
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Alerta legal</h3>
-        <p class="text-neutral-300">Os ToS da ChatGPT Plus/Claude Max não são explícitos sobre uso via harness; tecnicamente é "você usando o CLI". Na prática, se começar a parecer serviço pago revendido, você perde a conta. <strong>Use para dev/teste pessoal, nunca como substituto de API key em produto.</strong></p>
+        <p class="text-neutral-300">Os ToS da ChatGPT Plus/Claude Max nêo sêo explícitos sobre uso via harness; tecnicamente é "você usando o CLI". Na prática, se começar a parecer serviço pago revendido, você perde a conta. <strong>Use para dev/teste pessoal, nunca como substituto de API key em produto.</strong></p>
       </div>
     </section>
 
@@ -325,7 +325,7 @@ REASONING_MODEL:
         <h2 class="text-2xl font-bold">💰 Trade-off custo × latência × qualidade</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        "Qual modelo usar?" é a pergunta errada. A certa é: <strong class="text-purple-400">qual modelo usar para qual papel?</strong> Um harness com 5 skills pode justificar 3 providers diferentes — um rápido e barato para triagem, um reasoning forte para planejamento, um self-hosted para dados sensíveis. A decisão é <em>por papel</em>, não global.
+        "Qual modelo usar?" é a pergunta errada. A certa é: <strong class="text-purple-400">qual modelo usar para qual papel?</strong> Um harness com 5 skills pode justificar 3 providers diferentes — um rápido e barato para triagem, um reasoning forte para planejamento, um self-hosted para dados sensíveis. A decisêo é <em>por papel</em>, nêo global.
       </p>
 
       <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
@@ -356,7 +356,7 @@ REASONING_MODEL:
 
       <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center"><span class="mr-2">🎯</span> Regra de ouro</h3>
-        <p class="text-neutral-300 mb-4">Antes de otimizar modelo, otimize o <strong class="text-purple-400">papel</strong>. Um lead_agent gpt-5-high custa 10× mais caro que um gpt-5-mini — mas se ele toma 1 decisão boa que evita 20 chamadas subsequentes erradas, sai barato. Use modelo caro onde decisão ruim <em>gera cascata</em>; use modelo barato onde só processa.</p>
+        <p class="text-neutral-300 mb-4">Antes de otimizar modelo, otimize o <strong class="text-purple-400">papel</strong>. Um lead_agent gpt-5-high custa 10× mais caro que um gpt-5-mini — mas se ele toma 1 decisêo boa que evita 20 chamadas subsequentes erradas, sai barato. Use modelo caro onde decisêo ruim <em>gera cascata</em>; use modelo barato onde só processa.</p>
       </div>
     </section>
 
@@ -367,7 +367,7 @@ REASONING_MODEL:
         <h2 class="text-2xl font-bold">🧪 Lab: mesma tarefa em 3 modelos</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Chega de tabela. Vamos rodar a <strong class="text-purple-400">mesma</strong> skill de deep-research em três providers diferentes, capturar traces e comparar custo real. Ordem dos eventos é: preparar dataset fixo, declarar 3 model profiles, rodar, exportar, preencher planilha. O objetivo não é decidir "qual ganha" — é ver com seus olhos que "qualidade" é relativa ao caso de uso.
+        Chega de tabela. Vamos rodar a <strong class="text-purple-400">mesma</strong> skill de deep-research em três providers diferentes, capturar traces e comparar custo real. Ordem dos eventos é: preparar dataset fixo, declarar 3 model profiles, rodar, exportar, preencher planilha. O objetivo nêo é decidir "qual ganha" — é ver com seus olhos que "qualidade" é relativa ao caso de uso.
       </p>
 
       <div class="space-y-6 mb-6">
@@ -375,7 +375,7 @@ REASONING_MODEL:
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center"><span class="text-purple-400 font-bold">1</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Prepare 3 queries representativas</h4>
-            <p class="text-neutral-300 text-sm">Uma fácil ("estado da arte em RAG em 2026, 1 parágrafo"), uma média ("comparativo entre vLLM, SGLang e TGI para servir Qwen3 em uma H100") e uma difícil ("análise crítica das limitações metodológicas do paper X, com citação de fonte"). Use as mesmas 3 em todos os runs.</p>
+            <p class="text-neutral-300 text-sm">Uma fácil ("estado da arte em RAG em 2026, 1 parágrafo"), uma média ("comparativo entre vLLM, SGLang e TGI para servir Qwen3 em uma H100") e uma difícil ("análise crítica das limitações metodológicas do paper X, com citaçêo de fonte"). Use as mesmas 3 em todos os runs.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -395,15 +395,15 @@ REASONING_MODEL:
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center"><span class="text-purple-400 font-bold">4</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">Preencha a planilha de comparação</h4>
+            <h4 class="font-semibold text-white mb-2">Preencha a planilha de comparaçêo</h4>
             <p class="text-neutral-300 text-sm">9 linhas × colunas: query, provider, tokens_in, tokens_out, wall_time, custo_$, qualidade_1a5. Qualidade é nota subjetiva sua lendo a resposta — seja duro. Calcule custo_por_resposta_útil = custo / qualidade.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center"><span class="text-purple-400 font-bold">5</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">Escreva a conclusão (3 parágrafos)</h4>
-            <p class="text-neutral-300 text-sm">Um para cada query, dizendo qual provider venceu <em>para ela</em>. A conclusão raramente é "um único provider domina" — é "A venceu na fácil pelo custo, B na média pela qualidade, C na difícil porque só ele tinha os dados sensíveis ok". Guarde o documento — vai servir de referência para decisões futuras.</p>
+            <h4 class="font-semibold text-white mb-2">Escreva a conclusêo (3 parágrafos)</h4>
+            <p class="text-neutral-300 text-sm">Um para cada query, dizendo qual provider venceu <em>para ela</em>. A conclusêo raramente é "um único provider domina" — é "A venceu na fácil pelo custo, B na média pela qualidade, C na difícil porque só ele tinha os dados sensíveis ok". Guarde o documento — vai servir de referência para decisões futuras.</p>
           </div>
         </div>
       </div>
@@ -422,11 +422,11 @@ REASONING_MODEL:
         <div class="space-y-4 mb-8">
           <div class="flex items-start space-x-3">
             <span class="text-purple-400 mt-1">✓</span>
-            <div><strong class="text-white">base_url é o ponto de extensão</strong><span class="text-neutral-400"> — qualquer servidor OpenAI-compatible entra no DeerFlow sem código novo: OpenRouter, LiteLLM, Azure, Ollama, o que for.</span></div>
+            <div><strong class="text-white">base_url é o ponto de extensêo</strong><span class="text-neutral-400"> — qualquer servidor OpenAI-compatible entra no DeerFlow sem código novo: OpenRouter, LiteLLM, Azure, Ollama, o que for.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-purple-400 mt-1">✓</span>
-            <div><strong class="text-white">use_responses_api só para OpenAI oficial</strong><span class="text-neutral-400"> — libera reasoning nativo, built-in tools e eventos tipados, mas quebra em gateways que não implementam o contrato novo.</span></div>
+            <div><strong class="text-white">use_responses_api só para OpenAI oficial</strong><span class="text-neutral-400"> — libera reasoning nativo, built-in tools e eventos tipados, mas quebra em gateways que nêo implementam o contrato novo.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-purple-400 mt-1">✓</span>
@@ -434,15 +434,15 @@ REASONING_MODEL:
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-purple-400 mt-1">✓</span>
-            <div><strong class="text-white">CLI-backed é atalho para dev, não produção</strong><span class="text-neutral-400"> — usa sua assinatura pessoal; excelente para testar, proibido em deploy compartilhado.</span></div>
+            <div><strong class="text-white">CLI-backed é atalho para dev, nêo produçêo</strong><span class="text-neutral-400"> — usa sua assinatura pessoal; excelente para testar, proibido em deploy compartilhado.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-purple-400 mt-1">✓</span>
-            <div><strong class="text-white">Decisão é por papel, não global</strong><span class="text-neutral-400"> — modelo caro onde decisão ruim gera cascata, modelo barato onde só processa output.</span></div>
+            <div><strong class="text-white">Decisêo é por papel, nêo global</strong><span class="text-neutral-400"> — modelo caro onde decisêo ruim gera cascata, modelo barato onde só processa output.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-purple-400 mt-1">✓</span>
-            <div><strong class="text-white">Lab dos 3 provedores é obrigatório</strong><span class="text-neutral-400"> — não confie em benchmark de blog; rode a sua própria skill com a sua carga.</span></div>
+            <div><strong class="text-white">Lab dos 3 provedores é obrigatório</strong><span class="text-neutral-400"> — nêo confie em benchmark de blog; rode a sua própria skill com a sua carga.</span></div>
           </div>
         </div>
 

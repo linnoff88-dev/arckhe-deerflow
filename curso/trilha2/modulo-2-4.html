@@ -106,7 +106,7 @@
       <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÓDULO 2.4</span>
       <h1 class="text-3xl sm:text-4xl font-bold mb-4">👥 Sub-agents e custom agents</h1>
       <p class="text-lg text-neutral-400 max-w-3xl">
-        Sub-agent é uma chamada de isolamento de contexto. Custom agent é um cidadão do catálogo com nome próprio, personalidade (SOUL) e tools restritas. Saber qual usar em qual situação é o divisor entre arquitetura limpa e espaguete agentico.
+        Sub-agent é uma chamada de isolamento de contexto. Custom agent é um cidadêo do catálogo com nome próprio, personalidade (SOUL) e tools restritas. Saber qual usar em qual situaçêo é o divisor entre arquitetura limpa e espaguete agentico.
       </p>
       <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
         <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">5</div><div class="text-xs text-neutral-400">Tópicos</div></div>
@@ -121,7 +121,7 @@
 
     <div class="mb-12 bg-primary/10 rounded-xl border border-primary/30 p-6">
       <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Por que tanta gente confunde</h3>
-      <p class="text-neutral-300">Porque os dois "rodam LLM com tools" e os dois "retornam um resultado ao pai". A diferença é topológica: sub-agent é <em>anônimo e efêmero</em>; custom agent é <em>nomeado e persistente</em>. Esse módulo fixa a distinção e mostra quando cada um vence.</p>
+      <p class="text-neutral-300">Porque os dois "rodam LLM com tools" e os dois "retornam um resultado ao pai". A diferença é topológica: sub-agent é <em>anônimo e efêmero</em>; custom agent é <em>nomeado e persistente</em>. Esse módulo fixa a distinçêo e mostra quando cada um vence.</p>
     </div>
 
     <!-- TOPICO 1 -->
@@ -131,7 +131,7 @@
         <h2 class="text-2xl font-bold">🆚 Sub-agent vs. custom agent</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Vale começar pelo <em>grid</em> comparativo. Ele resume em uma tela a diferença que a maior parte das dúvidas de arquitetura não consegue articular.
+        Vale começar pelo <em>grid</em> comparativo. Ele resume em uma tela a diferença que a maior parte das dúvidas de arquitetura nêo consegue articular.
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -142,7 +142,7 @@
             <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span><strong>Efêmero</strong> — vive só para a sub-task, morre depois.</span></li>
             <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span><strong>Herda tools</strong> do agente pai (menos as bloqueadas).</span></li>
             <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span><strong>Sem SOUL</strong> — recebe só a task e o prompt de isolamento.</span></li>
-            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span><strong>Uso típico</strong>: ler 50 artigos e resumir, rodar análise grande numa sessão.</span></li>
+            <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span><strong>Uso típico</strong>: ler 50 artigos e resumir, rodar análise grande numa sessêo.</span></li>
             <li class="flex items-start space-x-2"><span class="text-blue-400">•</span><span><strong>Observabilidade</strong>: aparece como span dentro do trace pai.</span></li>
           </ul>
         </div>
@@ -177,18 +177,18 @@
 
       <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🎯</span> Conceito Central</h3>
-        <p class="text-neutral-300 mb-4">SOUL = <strong class="text-blue-400">Scope</strong>, <strong class="text-blue-400">Objectives</strong>, <strong class="text-blue-400">Unbreakable rules</strong>, <strong class="text-blue-400">Language/tone</strong>. Quatro blocos que, juntos, formam a identidade injetada no system prompt do agente <em>antes</em> de qualquer instrução específica.</p>
+        <p class="text-neutral-300 mb-4">SOUL = <strong class="text-blue-400">Scope</strong>, <strong class="text-blue-400">Objectives</strong>, <strong class="text-blue-400">Unbreakable rules</strong>, <strong class="text-blue-400">Language/tone</strong>. Quatro blocos que, juntos, formam a identidade injetada no system prompt do agente <em>antes</em> de qualquer instruçêo específica.</p>
         <ul class="space-y-2 text-neutral-300 text-sm">
           <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Scope</strong> — o que o agente cobre, o que delega, o que recusa.</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Objectives</strong> — em cada turno, o que ele tenta otimizar (precisão? velocidade? cobertura?).</span></li>
+          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Objectives</strong> — em cada turno, o que ele tenta otimizar (precisêo? velocidade? cobertura?).</span></li>
           <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Unbreakable</strong> — regras de compliance, privacidade, safety. Viram guardrails pinados.</span></li>
           <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong>Language/tone</strong> — como fala, quanto formaliza, se usa emoji, em que idioma.</span></li>
         </ul>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> SOUL vai no YAML, não no corpo</h3>
-        <p class="text-neutral-300">Coloque SOUL no frontmatter estruturado do agente, não diluído no prompt em prosa. Isso permite que o harness injete como bloco invariante e valide por schema — atributos faltando viram erro de boot, não bug em runtime.</p>
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> SOUL vai no YAML, nêo no corpo</h3>
+        <p class="text-neutral-300">Coloque SOUL no frontmatter estruturado do agente, nêo diluído no prompt em prosa. Isso permite que o harness injete como bloco invariante e valide por schema — atributos faltando viram erro de boot, nêo bug em runtime.</p>
       </div>
     </section>
 
@@ -199,7 +199,7 @@
         <h2 class="text-2xl font-bold">📄 RFC rfc-create-deerflow-agent</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Existe uma RFC no repositório chamada <strong class="text-blue-400">rfc-create-deerflow-agent</strong> que é leitura obrigatória antes de criar o seu primeiro custom agent. Ela define o layout de diretórios, o contrato do registry e as políticas de nomeação. Ler antes evita retrabalho garantido.
+        Existe uma RFC no repositório chamada <strong class="text-blue-400">rfc-create-deerflow-agent</strong> que é leitura obrigatória antes de criar o seu primeiro custom agent. Ela define o layout de diretórios, o contrato do registry e as políticas de nomeaçêo. Ler antes evita retrabalho garantido.
       </p>
 
       <div class="space-y-6 mb-6">
@@ -214,13 +214,13 @@
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">2</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Contrato do registry</h4>
-            <p class="text-neutral-300 text-sm">Todo agente deve expor uma função <code class="text-blue-400">register()</code> que devolve um objeto <code class="text-blue-400">AgentSpec</code> com name, soul, tools e middleware. O harness descobre agentes scanning <code class="text-blue-400">app/agents/*/agent.py</code>.</p>
+            <p class="text-neutral-300 text-sm">Todo agente deve expor uma funçêo <code class="text-blue-400">register()</code> que devolve um objeto <code class="text-blue-400">AgentSpec</code> com name, soul, tools e middleware. O harness descobre agentes scanning <code class="text-blue-400">app/agents/*/agent.py</code>.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">3</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">Política de nomeação</h4>
+            <h4 class="font-semibold text-white mb-2">Política de nomeaçêo</h4>
             <p class="text-neutral-300 text-sm">Kebab-case, sufixo semântico (<code class="text-blue-400">-auditor</code>, <code class="text-blue-400">-reviewer</code>, <code class="text-blue-400">-bot</code> proibido), sem números. Rename quebra todos os dispatches em andamento.</p>
           </div>
         </div>
@@ -228,14 +228,14 @@
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">4</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Lifecycle hooks</h4>
-            <p class="text-neutral-300 text-sm">A RFC define <code class="text-blue-400">on_activate</code>, <code class="text-blue-400">on_task_start</code>, <code class="text-blue-400">on_task_end</code>, <code class="text-blue-400">on_error</code>. É onde ficam métricas, auditoria e integração com sistemas externos.</p>
+            <p class="text-neutral-300 text-sm">A RFC define <code class="text-blue-400">on_activate</code>, <code class="text-blue-400">on_task_start</code>, <code class="text-blue-400">on_task_end</code>, <code class="text-blue-400">on_error</code>. É onde ficam métricas, auditoria e integraçêo com sistemas externos.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">5</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Eval obrigatório</h4>
-            <p class="text-neutral-300 text-sm">Nenhum agente entra no registry de produção sem um eval mínimo checado em CI. É a tranca contra regressão de comportamento em upgrades.</p>
+            <p class="text-neutral-300 text-sm">Nenhum agente entra no registry de produçêo sem um eval mínimo checado em CI. É a tranca contra regressêo de comportamento em upgrades.</p>
           </div>
         </div>
       </div>
@@ -248,16 +248,16 @@
         <h2 class="text-2xl font-bold">🤔 Skill nova ou custom agent?</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Depois de aprender skills no módulo 2.3 e custom agents aqui, a tentação é criar tudo como agente. Resista. Agente tem custo maior de manutenção, de review e de deploy. A decisão correta depende de quatro perguntas.
+        Depois de aprender skills no módulo 2.3 e custom agents aqui, a tentaçêo é criar tudo como agente. Resista. Agente tem custo maior de manutençêo, de review e de deploy. A decisêo correta depende de quatro perguntas.
       </p>
 
       <div class="bg-cyan-900/20 rounded-xl border border-cyan-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-cyan-400 mb-4 flex items-center"><span class="mr-2">📊</span> Checklist de decisão</h3>
+        <h3 class="text-lg font-semibold text-cyan-400 mb-4 flex items-center"><span class="mr-2">📊</span> Checklist de decisêo</h3>
         <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong>Precisa de personalidade consistente?</strong> Não → skill. Sim → agente.</li>
-          <li><strong>Tem canal próprio?</strong> (ex: Slack channel dedicado) Não → skill. Sim → agente.</li>
-          <li><strong>Precisa de tools restritas, não compartilhadas?</strong> Não → skill. Sim → agente.</li>
-          <li><strong>Vai aparecer em relatórios de compliance separado?</strong> Não → skill. Sim → agente.</li>
+          <li><strong>Precisa de personalidade consistente?</strong> Nêo → skill. Sim → agente.</li>
+          <li><strong>Tem canal próprio?</strong> (ex: Slack channel dedicado) Nêo → skill. Sim → agente.</li>
+          <li><strong>Precisa de tools restritas, nêo compartilhadas?</strong> Nêo → skill. Sim → agente.</li>
+          <li><strong>Vai aparecer em relatórios de compliance separado?</strong> Nêo → skill. Sim → agente.</li>
         </ul>
         <p class="text-neutral-400 text-xs mt-4">Regra: 3+ "sim" = custom agent. 0-2 = skill.</p>
       </div>
@@ -306,11 +306,11 @@
         <h3 class="text-lg font-semibold text-white mb-4">Passos do lab</h3>
         <ol class="space-y-4 text-neutral-300">
           <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">1.</span><div><strong class="text-white">Criar o diretório</strong>: <code class="text-blue-400">app/agents/security-auditor/</code> com <code class="text-blue-400">AGENT.md</code>, <code class="text-blue-400">agent.py</code> e <code class="text-blue-400">tools/</code>. Seguindo a RFC.</div></li>
-          <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">2.</span><div><strong class="text-white">Escrever SOUL</strong> no frontmatter do AGENT.md: scope = "auditoria leve de mensagens postadas em canais configurados"; objectives = "precisão sobre velocidade"; unbreakable = "nunca expor o conteúdo auditado fora do Slack, nunca tentar correção automática"; tone = "técnico, direto, em PT-BR".</div></li>
+          <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">2.</span><div><strong class="text-white">Escrever SOUL</strong> no frontmatter do AGENT.md: scope = "auditoria leve de mensagens postadas em canais configurados"; objectives = "precisêo sobre velocidade"; unbreakable = "nunca expor o conteúdo auditado fora do Slack, nunca tentar correçêo automática"; tone = "técnico, direto, em PT-BR".</div></li>
           <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">3.</span><div><strong class="text-white">Implementar agent.py</strong> com <code class="text-blue-400">register()</code> retornando AgentSpec. Tools restritas: <code class="text-blue-400">scan_for_secrets</code>, <code class="text-blue-400">classify_link</code>, <code class="text-blue-400">check_pii</code>. Sem acesso ao filesystem nem ao search externo.</div></li>
-          <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">4.</span><div><strong class="text-white">Plugar no canal Slack</strong>: em <code class="text-blue-400">app/channels/slack.py</code>, adicione um roteamento: mensagens em <code class="text-blue-400">#sec-audit</code> vão direto ao <code class="text-blue-400">security-auditor</code>, bypassando o lead_agent. Isso é o que torna o agente "vivo num canal".</div></li>
+          <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">4.</span><div><strong class="text-white">Plugar no canal Slack</strong>: em <code class="text-blue-400">app/channels/slack.py</code>, adicione um roteamento: mensagens em <code class="text-blue-400">#sec-audit</code> vêo direto ao <code class="text-blue-400">security-auditor</code>, bypassando o lead_agent. Isso é o que torna o agente "vivo num canal".</div></li>
           <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">5.</span><div><strong class="text-white">Escrever eval</strong>: 10 mensagens golden (5 com issue, 5 limpas) e verificar que o agente chega no veredito certo. Rode com <code class="text-blue-400">uv run python evals/security_auditor.py</code>.</div></li>
-          <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">6.</span><div><strong class="text-white">Teste live</strong>: postar no <code class="text-blue-400">#sec-audit</code> uma mensagem contendo uma API key fake (<code class="text-blue-400">sk-aaa...</code>). O agente deve responder em até 30s com o parecer estruturado e recomendação de revogar.</div></li>
+          <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">6.</span><div><strong class="text-white">Teste live</strong>: postar no <code class="text-blue-400">#sec-audit</code> uma mensagem contendo uma API key fake (<code class="text-blue-400">sk-aaa...</code>). O agente deve responder em até 30s com o parecer estruturado e recomendaçêo de revogar.</div></li>
           <li class="flex items-start space-x-3"><span class="text-blue-400 font-bold">7.</span><div><strong class="text-white">Validar no LangSmith</strong>: trace do agente aparece separado, com nome próprio. Confirme que nenhuma tool fora do whitelist foi chamada.</div></li>
         </ol>
       </div>
@@ -322,7 +322,7 @@
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Entregável</h3>
-        <p class="text-neutral-300">Diretório do agente commitado + log do Slack mostrando uma detecção real (fake key) + trace do LangSmith. Se o eval do passo 5 retornou 10/10 e o live test respondeu em &lt;30s, o lab cumpriu o objetivo. Bônus: rodar o <code class="text-primary">security-auditor</code> também como dispatch do lead_agent em outro canal, só para validar que ele continua funcionando em modo "cidadão do catálogo".</p>
+        <p class="text-neutral-300">Diretório do agente commitado + log do Slack mostrando uma detecçêo real (fake key) + trace do LangSmith. Se o eval do passo 5 retornou 10/10 e o live test respondeu em &lt;30s, o lab cumpriu o objetivo. Bônus: rodar o <code class="text-primary">security-auditor</code> também como dispatch do lead_agent em outro canal, só para validar que ele continua funcionando em modo "cidadêo do catálogo".</p>
       </div>
     </section>
 
@@ -346,7 +346,7 @@
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-blue-400 mt-1">✓</span>
-            <div><strong class="text-white">RFC rfc-create-deerflow-agent é obrigatória</strong><span class="text-neutral-400"> — layout, registry, nomeação, lifecycle, eval.</span></div>
+            <div><strong class="text-white">RFC rfc-create-deerflow-agent é obrigatória</strong><span class="text-neutral-400"> — layout, registry, nomeaçêo, lifecycle, eval.</span></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-blue-400 mt-1">✓</span>
@@ -358,7 +358,7 @@
           </div>
           <div class="flex items-start space-x-3">
             <span class="text-blue-400 mt-1">✓</span>
-            <div><strong class="text-white">Agent tem eval obrigatório em CI</strong><span class="text-neutral-400"> — garante que comportamento não regride em upgrade de harness.</span></div>
+            <div><strong class="text-white">Agent tem eval obrigatório em CI</strong><span class="text-neutral-400"> — garante que comportamento nêo regride em upgrade de harness.</span></div>
           </div>
         </div>
 
